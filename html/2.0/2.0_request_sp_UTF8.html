@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=320, initial-scale=1.0, user-scalable=yes, maximum-scale=0.6667, minimum-scale=1.0" />
+<meta name="format-detection" content="telephone=no"/>
+<link href="./design/common.css" rel="stylesheet" type="text/css">
+<link href="./design/j_mobile1.03.css" rel="stylesheet" type="text/css">
+<script src="./design/jquery1.5.js"></script>
+<script src="./design/config.js"></script>
+<script src="./design/j_mobile1.03.js"></script>
+<title>入力太郎|PC・スマホのEFO|プライムクロス</title>
+</head>
+ 
+<script language="javascript"> 
+function alert_error(){
+}
+function my_submit(val){
+}
+function my_submit_login(val){
+}
+function check(f) {
+}
+</script>
+ 
+<!-- <script src="https://www.codeles.net/sato/sample_primex/converter.php?t=request" type="text/javascript" charset="UTF-8"></script> -->
+<script src="http://localhost/primex/modularization/converter.php?t=request" type="text/javascript" charset="UTF-8"></script>
+ 
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" onload="">
+ 
+<div data-role="page" id="request" data-theme="d">
+ 
+<div class="header">
+
+<img src="https://www.codeles.net/sato/else/img/title_sample.png" width="100%" height="auto">
+
+</div>
+<div class="search" id="sch">
+	
+	<div class="login" style="display:none">
+		<form name="register_login" method="POST" enctype="UTF-8">
+         <INPUT >
+         <INPUT >
+         <INPUT >
+ 
+			<table>
+				<tr>
+					<th>メールアドレス</th>
+					<td><input name="login_mail" type="email" value=""></td>
+				</tr>
+				<tr>
+					<th>パスワード</th>
+					<td><input name="login_passwd" type="password" value=""></td>
+				</tr>
+			</table>
+			<p><input type="button" value="ログイン" onclick=""></p>
+			</form>
+	</div>
+<form name="register" method="POST" enctype="UTF-8">
+         <INPUT TYPE="hidden" NAME="b_code" VALUE="B-81">
+         <INPUT TYPE="hidden" NAME="formType" VALUE="request">
+         <INPUT TYPE="hidden" NAME="submit_type" VALUE="confirm">
+ 
+      <div data-role="content">
+        
+          <label for="vcname1_id">お名前（全角）<span class="redtext">【必須】</span></label>
+          <input name="col_4" id="vcname1_id" type="text" value="" istyle="4" class="t5" placeholder="姓" maxlength="10">
+					<input name="col_5" id="vcname1_id" type="text" value="" istyle="4" class="t5" placeholder="名" maxlength="10">
+ 
+          <label for="vcname_kana1_id">フリガナ（全角）<span class="redtext">【必須】</span></label>
+					<input name="col_14" id="vcname1_id" type="text" value="" istyle="4" class="t5" placeholder="セイ" maxlength="40">
+					<input name="col_15" id="vcname1_id" type="text" value="" istyle="4" class="t5" placeholder="メイ" maxlength="40">
+ 
+          <label for="pc_mail_id">メールアドレス<span class="redtext">【必須】</span></label>
+          <input name="mailaddr" id="pc_mail_id" type="email" maxlength="100" istyle="3" value="">
+ 
+          <label for="phone_id">電話番号<span class="redtext">【必須】</span></label>
+          <input name="col_13[]" id="phone_id" type="tel" istyle="4" value="" class="t4" maxlength="5">&nbsp;―&nbsp;<input name="col_13[]" id="phone_id" type="tel" istyle="4" value="" class="t4" maxlength="5">&nbsp;―&nbsp;<input name="col_13[]" id="phone_id" type="tel" istyle="4" value="" class="t4" maxlength="5">
+ 
+ 
+          <label for="zip_id">郵便番号<span class="redtext">【必須】</span></label>
+          <div class="zip">
+           <input name="col_19_1" id="zip_id" type="tel" maxlength="3" istyle="4" class="t3" value="">&nbsp;―&nbsp;
+           <input name="col_19_2" id="zip_id" type="tel" maxlength="4" istyle="4" class="t4" value="">&nbsp;
+           <input type="button" value="住所検索" data-role="none"  name="B1" onClick="AjaxZip2.zip2addr('col_19_1','col_12','col_21','col_19_2','','col_22');">
+		 </div>
+					<p class="note">（海外居住の方は”000-0000”と入れてください）</p>
+ 
+          <label for="pref_id">都道府県<span class="redtext">【必須】</span></label>
+          <input name="col_12" id="pref_id" value="" maxlength="4">
+ 
+          <label for="city_id">市区名（例：中央区）<span class="redtext">【必須】</span></label>
+          <input name="col_21" id="city_id" value="" maxlength="50">
+ 
+          <label for="city2_id">町村名（例：京橋）<span class="redtext">【必須】</span></label>
+          <input name="col_22" id="city2_id" value="" maxlength="100">
+ 
+          <label for="town_id">丁目番地（例：3-13-1）<span class="redtext">【必須】</span></label>
+          <input name="col_23" id="town_id" value="" maxlength="50">
+ 
+          <label for="build_id">マンション名・部屋番号（例：○○マンション101）</label>
+          <input name="col_24" id="build_id" type="text" maxlength="100" value="">
+          
+ 
+          <label for="birth_year_id">生年月日（年齢）<span class="redtext">【必須】</span></label>
+          西暦 <input name="col_16[]" id="birth_year_id" type="tel" maxlength="4" istyle="4" class="t4" value=""> 年 <input name="col_16[]" id="birth_month_id" type="tel" maxlength="2" istyle="4" class="t2" value=""> 月 <input name="col_16[]" id="birth_day_id" type="tel" maxlength="2" istyle="4" class="t2" value=""> 日<br />
+					<span class="age">（満 <input name="col_17" id="age_id" type="tel" maxlength="2" istyle="4" class="t2" value=""> 歳）</span>
+					
+					<label for="" style="display:block;">ご予算<span class="redtext">【必須】</span></label>
+          <select name="col_29" data-native-menu="true">
+           <option value="" >選択</option>
+    <option value="～3000万円" >～3000万円</option>
+    <option value="～3200万円" >～3200万円</option>
+    <option value="～3400万円" >～3400万円</option>
+    <option value="～3600万円" >～3600万円</option>
+    <option value="～3800万円" >～3800万円</option>
+    <option value="～4000万円" >～4000万円</option>
+    <option value="～4200万円" >～4200万円</option>
+    <option value="～4400万円" >～4400万円</option>
+    <option value="～4600万円" >～4600万円</option>
+    <option value="～4800万円" >～4800万円</option>
+    <option value="～5000万円" >～5000万円</option>
+    <option value="～5200万円" >～5200万円</option>
+    <option value="～5400万円" >～5400万円</option>
+    <option value="～5600万円" >～5600万円</option>
+    <option value="～5800万円" >～5800万円</option>
+    <option value="～6000万円" >～6000万円</option>
+    <option value="～6200万円" >～6200万円</option>
+    <option value="～6400万円" >～6400万円</option>
+    <option value="～6600万円" >～6600万円</option>
+    <option value="～6800万円" >～6800万円</option>
+    <option value="～7000万円" >～7000万円</option>
+    <option value="～7500万円" >～7500万円</option>
+    <option value="～8000万円" >～8000万円</option>
+          </select>
+ 
+					<br />
+					
+					<label for="how_id" style="display:block;">このホームページをどこでお知りになりましたか？<span class="redtext">【必須】</span></label>
+          <select name="col_HP" id="col_HP" data-native-menu="true">
+           <option value="" >選択</option>
+    <option value="売主ホームページ" >売主ホームページ</option>
+    <option value="販売会社ホームページ" >販売会社ホームページ</option>
+    <option value="SUUMO新築マンション（NET）" >SUUMO新築マンション（NET）</option>
+    <option value="Yahoo!不動産" >Yahoo!不動産</option>
+    <option value="Yahoo!バナー広告" >Yahoo!バナー広告</option>
+    <option value="キーワード検索（Yahoo!）" >キーワード検索（Yahoo!）</option>
+    <option value="キーワード検索（Google）" >キーワード検索（Google）</option>
+    <option value="HOME4U" >HOME4U</option>
+    <option value="新築HOME’S" >新築HOME’S</option>
+    <option value="新築オウチーノ" >新築オウチーノ</option>
+    <option value="日経住宅サーチ" >日経住宅サーチ</option>
+    <option value="ホームナビ" >ホームナビ</option>
+    <option value="ノムコム" >ノムコム</option>
+    <option value="クラソア" >クラソア</option>
+    <option value="スマイティ" >スマイティ</option>
+    <option value="チラシ" >チラシ</option>
+    <option value="看板" >看板</option>
+    <option value="新聞" >新聞</option>
+    <option value="SUUMO新築マンション（首都圏版）" >SUUMO新築マンション（首都圏版）</option>
+    <option value="SUUMO新築マンション（エリア版）" >SUUMO新築マンション（エリア版）</option>
+    <option value="クラブオーベル" >クラブオーベル</option>
+    <option value="その他" >その他</option>
+          </select>
+					<label for="" style="display:block;">ご希望の広さ<span class="redtext">【必須】</span></label>
+          <select name="col_28" data-native-menu="true">
+           <option value="" >選択</option>
+    <option value="30m2未満" >30m2未満</option>
+    <option value="30m2～" >30m2～</option>
+    <option value="35m2～" >35m2～</option>
+    <option value="40m2～" >40m2～</option>
+    <option value="45m2～" >45m2～</option>
+    <option value="50m2～" >50m2～</option>
+    <option value="55m2～" >55m2～</option>
+    <option value="60m2～" >60m2～</option>
+    <option value="65m2～" >65m2～</option>
+    <option value="70m2～" >70m2～</option>
+    <option value="75m2～" >75m2～</option>
+    <option value="80m2～" >80m2～</option>
+          </select>
+					<label for="" style="display:block;">ご希望の間取り<span class="redtext">【必須】</span></label>
+          <select name="col_27" data-native-menu="true">
+           <option value="" >選択</option>
+    <option value="1LDK" >1LDK</option>
+    <option value="2LDK" >2LDK</option>
+    <option value="3LDK" >3LDK</option>
+ 
+          </select>
+          
+					<label for="" style="display:block;">現在のお住まい<span class="redtext">【必須】</span></label>
+          <select name="col_26" data-native-menu="true">
+           <option value="" >選択</option>
+    <option value="戸建（持ち家）" >戸建（持ち家）</option>
+    <option value="マンション（持ち家）" >マンション（持ち家）</option>
+    <option value="マンション（賃貸）" >マンション（賃貸）</option>
+    <option value="戸建（賃貸）" >戸建（賃貸）</option>
+    <option value="社宅・官舎" >社宅・官舎</option>
+    <option value="家族同居" >家族同居</option>
+    <option value="その他" >その他</option>
+          </select>
+ 
+          <label for="pref_id">ご家族数 （半角）<span class="redtext">【必須】</span></label>
+          <input name="col_25" value="" maxlength="2" istyle="4" class="t2">人
+ 
+<br />
+					
+					<div data-role="collapsible" data-collapsed="1" data-theme="b"  style='display:none;'  >
+						<h3>ご来場予約をされる方はこちら</h3>
+							ご希望の来場日時
+							<label for="">■第一希望</label>
+							<input name="choice1[]" id="" type="tel" maxlength="2" istyle="4" class="t2" value=""> 月 <input name="choice1[]" id="" type="tel" maxlength="2" istyle="4" class="t2" value=""> 日 <input name="choice1[]" id="" type="tel" maxlength="2" istyle="2" class="t2" value=""> 時<br>
+							<label for="">■第ニ希望</label>
+							<input name="choice2[]" id="" type="tel" maxlength="2" istyle="4" class="t2" value=""> 月 <input name="choice2[]" id="" type="tel" maxlength="2" istyle="4" class="t2" value=""> 日 <input name="choice2[]" id="" type="tel" maxlength="2" istyle="2" class="t2" value=""> 時<br>
+							<p class="note">※ご希望の時間が満席の場合は他のご希望日時に変更をお願いする場合もございます。急なご予約の場合は、混雑状況によりお待ちいただく場合もございます。予め御了承ください。</p>
+					</div>
+					
+					<br />
+ 
+					<p style='display:none;' >＜個人情報のお取り扱いについて＞<br>
+					資料請求、お問合せをされる場合には、事前に<a href="http://www.prime-x.co.jp/" target="_brank">『個人情報のお取り扱いについて』</a>をご一読いただきその利用目的等、内容をご理解いただいた上で下記”同意する”を選択してください。</p>
+ 
+			</div>
+			
+<div class="regist" style='display:none;' >
+    個人情報保護規約に
+    <input type="checkbox" name="privacy" id="privacy" value="同意する"  />
+		<label for="privacy">同意する<span class="redtext">【必須】</span></label>
+</div>
+ 
+ 
+<div data-role="content" style="display:none">
+<span class="redtext">▼</span>
+</div>
+ 
+<a href="" target="_brank"  style="display:none"><img src="" border="0"></a>
+			<div class="regist"  style="display:none">
+				<br />
+				<br />
+				<br />
+				<a href="" target="_brank"></a><br />
+				<a href="" target="_brank"></a><br />
+				<input type="checkbox" name="wellith" id="dummy" value="入会する" checked /><label for="dummy"></label>
+				<br /><br />
+				<a href="" target="_brank"></a><br />
+				<input type="checkbox" name="agree_privacy" id="dummy" value="同意する"  />
+				<label for="dummy"></label>
+			</div>
+          
+      <div class="toSiryoConfirm">
+        <a href="#" data-ajax="false" onclick="">
+
+          <img src="https://www.codeles.net/sato/else/img/send_sample.png" alt="同意し、確認画面へ進む" width="300" /></a>
+
+				<a style="display:none" class="ui-btn ui-btn-icon-left ui-btn-corner-all ui-shadow ui-btn-up-d" data-theme="d" href="javascript:history.back()" data-role="button" data-icon="back" data-transition="slide"><span style="display:none" class="ui-btn-inner ui-btn-corner-all"><span style="display:none" class="ui-btn-text">前のページへ戻る</span><span style="display:none" class="ui-icon ui-icon-back ui-icon-shadow"></span></span></a>
+      </div>
+      <br />
+    </form>
+  </div>
+</div>
+</body>
+</html>
+

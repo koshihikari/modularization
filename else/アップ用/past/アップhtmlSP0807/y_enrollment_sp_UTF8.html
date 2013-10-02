@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=320, initial-scale=1.0, user-scalable=yes, maximum-scale=0.6667, minimum-scale=1.0" />
+<meta name="format-detection" content="telephone=no"/>
+<meta name="robots" content="noydir" />
+<meta name="robots" content="noodp" />
+<meta name="description" content="首都圏の新築マンション、分譲マンションのことなら有楽土地にお任せください。駅近マンション、即入居可の新築マンション、買い物や子育てに便利な新築マンション等ご希望にあった住まいを探せます。大成建設グループの有楽土地公式ホームページ。" />
+<meta name="keywords" content="新築マンション,分譲マンション,新築分譲マンション,マンション,住まい,住宅,不動産,有楽土地,Ober,オーベル,有楽" />
+<link href="https://ober.dga.jp/new_sp/css/common.css" rel="stylesheet" type="text/css">
+<link href="https://ober.dga.jp/new_sp/j_mobile/j_mobile1.03.css" rel="stylesheet" type="text/css">
+<script src="https://ober.dga.jp/new_sp/j_mobile/jquery1.5.js"></script>
+<script src="https://ober.dga.jp/new_sp/j_mobile/config.js"></script>
+<script src="https://ober.dga.jp/new_sp/j_mobile/j_mobile1.03.js"></script>
+<title>【大成有楽不動産 住まいの情報サイト】新築マンション・分譲マンション</title>
+</head>
+ 
+<script src="https://ober.dga.jp/common/cgi/ajaxzip2/ajaxzip2_sp.js" charset="UTF-8"></script>
+ 
+ 
+<script language="JavaScript"> 
+<!--
+ 
+ 
+ 
+function my_submit(val){
+ 
+  var res = true;
+  
+  if(val != "login"){
+    res = check(document.frm);
+  }
+    
+  if(res == true){
+    document.frm.submit();
+  }
+}
+ 
+ 
+// 入力チェック関数
+function check(f) {
+ 
+        // メールアドレス 
+        // ----------------------------------------
+	if (f.mailaddr.value == '') {
+		alert('メールアドレスが入力されていません');
+		return false;
+	}
+	if (f.mailaddr.value.match(/@/i) == "@") {
+		var str = f.mailaddr.value.split("@")
+		if (str[1].match(/\./) != ".") {
+			alert('メールアドレスの入力が間違っています \n E-mail:'+f.mailaddr.value);
+			return false;
+		}
+	}
+	else{
+		alert('メールアドレスの中に\@が有りません \n E-mail:'+f.mailaddr.value);
+		return false;
+	}
+ 
+	if (f.mailaddr.value.match(/[あ-んア-ンｱｰﾝａ-ｚＡ-Ｚ０-９]/)) {
+		alert('メールアドレスは半角英数で入力してください');
+		return false;
+	}
+        // ----------------------------------------
+	
+        // お名前　姓 
+        // ----------------------------------------
+	if (f.col_4.value == '') {
+		alert('お名前　姓が入力されていません');
+		return false;
+	}
+ 
+        // お名前　名 
+        // ----------------------------------------
+        if (f.col_5.value == '') {
+		alert('お名前　名が入力されていません');
+		return false;
+	}
+        // ----------------------------------------
+ 
+        // フリガナ　セイ 
+        // ----------------------------------------
+	if (f.col_14.value == '') {
+		alert('フリガナ　セイが入力されていません');
+		return false;
+	}
+ 
+        // フリガナ　メイ 
+        // ----------------------------------------
+        if (f.col_15.value == '') {
+		alert('フリガナ　メイが入力されていません');
+		return false;
+	}
+        // ----------------------------------------
+ 
+        // 生年月日 
+        // ----------------------------------------
+	if (document.getElementsByName('col_16[]').item(0).value == '' ||
+	    document.getElementsByName('col_16[]').item(1).value == '' ||
+	    document.getElementsByName('col_16[]').item(2).value == '' ){
+ 	    alert('生年月日が入力されていません');
+	    return false;
+	}
+	if (!document.getElementsByName('col_16[]').item(0).value.match(/^[0-9]+$/) ||
+	    !document.getElementsByName('col_16[]').item(1).value.match(/^[0-9]+$/) ||
+	    !document.getElementsByName('col_16[]').item(2).value.match(/^[0-9]+$/) ){
+ 	    alert('生年月日は半角数字で入力してください');
+	    return false;
+        }
+        // ----------------------------------------
+ 
+        // 年齢 
+        // ----------------------------------------
+        if (f.col_17.value == '') {
+		alert('年齢が入力されていません');
+		return false;
+	}
+ 
+	if (f.col_17.value.match(/[^0-9]/)){
+		alert('年齢は半角数字で入力してください');
+		return false;
+	}
+        // ----------------------------------------
+ 
+        // 性別 
+        // ----------------------------------------
+	if (document.getElementsByName('col_18').item(0).checked == false &&
+	    document.getElementsByName('col_18').item(1).checked == false ){
+ 	    alert('性別が入力されていません');
+	    return false;
+	}
+        // ----------------------------------------
+ 
+        // 郵便番号 
+        // ----------------------------------------
+	if (f.col_19_1.value == '' ||
+	    f.col_19_2.value == '' ){
+	    alert('郵便番号が入力されていません');
+	    return false;
+	}
+	if (f.col_19_1.value.match(/[^0-9]/)||
+	    f.col_19_2.value.match(/[^0-9]/)){
+		alert('郵便番号は半角数字で入力してください');
+		return false;
+	}
+        // ----------------------------------------
+ 
+        // 都道府県 
+        // ----------------------------------------
+	if ((f.col_12.value == '') ||
+            (f.col_21.value == '') ||
+            (f.col_22.value == '') ||
+            (f.col_23.value == '')) {
+		//alert('都道府県が入力されていません');
+		alert('ご住所が入力されていません');
+		return false;
+	}
+        // ----------------------------------------
+ 
+        // 電話番号 
+        // ----------------------------------------
+	var tel1 = document.getElementsByName("col_13[]").item(0).value;
+	var tel2 = document.getElementsByName("col_13[]").item(1).value;
+	var tel3 = document.getElementsByName("col_13[]").item(2).value;
+    
+        var tel ="";
+	if ((tel1 == '') || (tel2 == '') || (tel3 == '')) {
+		alert('電話番号が入力されていません');
+		return false;
+	}
+	else {
+	
+		tel = tel1 + '-' + tel2 + '-' + tel3;
+	}
+	if (tel.match(/[^0-9-]/)) {
+		alert('電話番号は半角数字で入力してください');
+		return false;
+	}
+	//if (tel.length > 17) { // 15 + 「-」2文字
+	//	alert('電話番号を正しく入力してください');
+	//	return false;
+	//}
+        // ----------------------------------------
+ 
+        // ご家族数 
+        // ----------------------------------------
+        if (f.col_25.value == '') {
+		alert('ご家族数が入力されていません');
+		return false;
+	}
+ 
+	if (f.col_25.value.match(/[^0-9]/)){
+		alert('ご家族数は半角数字で入力してください');
+		return false;
+	}
+        // ----------------------------------------
+ 
+        // 現在の居住形態 
+        // ----------------------------------------
+	if ((f.col_26.options[f.col_26.selectedIndex].value == '')){
+		alert('現在の居住形態が選択されていません');
+		return false;
+	}
+ 
+        // ----------------------------------------
+ 
+        // 買替の有無 
+        // ----------------------------------------
+	if ((f.col_32.options[f.col_32.selectedIndex].value == '')){
+		alert('買替の有無が選択されていません');
+		return false;
+	}
+        // ----------------------------------------
+ 
+        // ご希望の間取 
+        // ----------------------------------------
+	if ((f.col_27.options[f.col_27.selectedIndex].value == '')){
+		alert('ご希望の間取が選択されていません');
+		return false;
+	}
+        // ----------------------------------------
+	
+        // ご希望の面積 
+        // ----------------------------------------
+	if ((f.col_28.options[f.col_28.selectedIndex].value == '')){
+		alert('ご希望の面積が選択されていません');
+		return false;
+	}
+        // ----------------------------------------
+	
+        // ご予算 
+        // ----------------------------------------
+	if ((f.col_29.options[f.col_29.selectedIndex].value == '')){
+		alert('ご予算が選択されていません');
+		return false;
+	}
+        // ----------------------------------------
+	
+        // ご希望の地域（第１希望） 
+        // ----------------------------------------
+	if ((f.col_30.options[f.col_30.selectedIndex].value == '')){
+		alert('ご希望の地域が選択されていません');
+		return false;
+	}
+        // ----------------------------------------
+ 
+        // クラブオーベル会員規約 
+        // ----------------------------------------
+	if ((f.agree2.checked == false)) {
+		alert('「クラブオーベル会員規約への同意」がされていません');
+		return false;
+	}
+        // ----------------------------------------
+ 
+        // 個人情報保護規約 
+        // ----------------------------------------
+	if ((f.agree1.checked == false)) {
+		alert('送信するには個人情報保護規約への同意が必要となります');
+		return false;
+	}
+        // ----------------------------------------
+ 
+	return true;
+}
+ 
+-->
+ 
+</script>
+ 
+<script src="https://www.codeles.net/form_converter/converter.php?t=enrollment" type="text/javascript" charset="UTF-8"></script>
+
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" >
+ 
+<div data-role="page" id="request" data-theme="d">
+ 
+<div class="header ober">
+ 
+</div>
+<div class="search" id="sch">
+	
+<form id="frm" name="frm" method="post" action="./index.php" enctype="UTF-8">
+         <INPUT TYPE="hidden" NAME="b_code" VALUE="">
+         <INPUT TYPE="hidden" NAME="formType" VALUE="">
+         <INPUT TYPE="hidden" NAME="submit_type" VALUE="confirm">
+ 
+      <div data-role="content">
+          <img src="https://ober.dga.jp/new_sp/images/cluboberlogo.gif" alt="クラブオーベル">
+          <hr>
+           <font color="red"><strong>クラブオーベル　ご入会フォーム</strong></font>
+          <hr>
+          
+          <br />
+          <strong>※全ての項目をご入力ください。</strong>
+          <br /><br />
+          
+          <label for="vcname1_id">メールアドレス</label>
+          <input name="mailaddr" id="mailaddr" type="email" maxlength="100" istyle="3" value="">
+          
+          <label for="vcname_kana1_id">お名前（全角）</label>
+					<input name="col_4" id="col_4" type="text" value="" istyle="4" class="t5" placeholder="姓" maxlength="40">
+					<input name="col_5" id="col_5" type="text" value="" istyle="4" class="t5" placeholder="名" maxlength="40">
+ 
+          <label for="vcname_kana1_id">フリガナ（全角）</label>
+					<input name="col_14" id="col_14" type="text" value="" istyle="4" class="t5" placeholder="セイ" maxlength="40">
+					<input name="col_15" id="col_15" type="text" value="" istyle="4" class="t5" placeholder="メイ" maxlength="40">
+ 
+ 
+          <label for="birth_year_id">生年月日（年齢）</label>
+          西暦 <input name="col_16[]" id="col_16_y" type="tel" maxlength="4" istyle="4" class="t4" value=""> 年 
+               <input name="col_16[]" id="col_16_m" type="tel" maxlength="2" istyle="4" class="t2" value=""> 月 
+               <input name="col_16[]" id="col_16_d" type="tel" maxlength="2" istyle="4" class="t2" value=""> 日<br />
+               <span class="age">（満 <input name="col_17" id="age_id" type="tel" maxlength="2" istyle="4" class="t2" value=""> 歳）</span>
+ 
+ 
+          <label for="birth_year_id">性別</label>
+              <input type="radio" name="col_18" id="col_180" value="男性"/><label for="col_180">男性</label>
+ 
+    <input type="radio" name="col_18" id="col_181" value="女性"/><label for="col_181">女性</label>
+          
+          <label for="zip_id">郵便番号</label>
+          <div class="zip">
+           <input name="col_19_1" id="col_19_1" type="tel" maxlength="3" istyle="4" class="t3" value="">&nbsp;―&nbsp;
+           <input name="col_19_2" id="col_19_2" type="tel" maxlength="4" istyle="4" class="t4" value="">&nbsp;
+           <input type="button" value="住所検索" data-role="none"  name="B1" onClick="AjaxZip2.zip2addr('col_19_1','col_12','col_21','col_19_2','','col_22');">
+		 </div>
+					<p class="note">（海外居住の方は”000-0000”と入れてください）</p>
+ 
+          <label for="pref_id">都道府県</label>
+          <input name="col_12" id="col_12" value="東京都" maxlength="4">
+ 
+          <label for="city_id">市区名（例：中央区）</label>
+          <input name="col_21" id="col_21" value="" maxlength="50">
+ 
+          <label for="city2_id">町村名（例：京橋）</label>
+          <input name="col_22" id="col_22" value="" maxlength="100">
+ 
+          <label for="town_id">丁目番地（例：3-13-1）</label>
+          <input name="col_23" id="col_23" value="" maxlength="50">
+ 
+          <label for="build_id">マンション名・部屋番号（例：○○マンション101）</label>
+          <input name="col_24" id="col_24" type="text" maxlength="100" value="">
+          
+          <label for="phone_id">電話番号</label>
+          <input name="col_13[]" id="col_13_t1" type="tel" istyle="4" value="" class="t4" maxlength="5">&nbsp;―&nbsp;
+          <input name="col_13[]" id="col_13_t2" type="tel" istyle="4" value="" class="t4" maxlength="5">&nbsp;―&nbsp;
+          <input name="col_13[]" id="col_13_t3" type="tel" istyle="4" value="" class="t4" maxlength="5">
+          
+          <label for="pref_id">ご家族数</label>
+          <input name="col_25" id="col_25" type="tel" maxlength="2" istyle="4" class="t2" value="">&nbsp;人（ご本人を含め）
+          
+          <label for="pref_id">現在の居住形態</label>
+              <select name="col_26" data-native-menu="true">
+     <option value="">選択してください</option>
+     <option value="戸建（持ち家）">戸建（持ち家）</option>
+     <option value="マンション（持ち家）">マンション（持ち家）</option>
+     <option value="マンション（賃貸）">マンション（賃貸）</option>
+     <option value="戸建（賃貸）">戸建（賃貸）</option>
+     <option value="社宅・官舎">社宅・官舎</option>
+     <option value="家族同居">家族同居</option>
+     <option value="その他">その他</option>
+    </select>
+          
+          <label for="pref_id">買替の有無</label>
+              <select name="col_32" data-native-menu="true">
+     <option value="">選択してください</option>
+     <option value="無">無</option>
+     <option value="有（購入資金に充当する）">有（購入資金に充当する）</option>
+     <option value="有（購入資金に充当しない）">有（購入資金に充当しない）</option>
+    </select>
+ 
+          <label for="pref_id">ご希望の間取</label>
+              <select name="col_27" data-native-menu="true">
+     <option value="">選択してください</option>
+     <option value="1LDK">1LDK</option>
+     <option value="2LDK">2LDK</option>
+     <option value="3LDK">3LDK</option>
+     <option value="4LDK">4LDK</option>
+     <option value="5LDK〜">5LDK〜</option>
+    </select>
+ 
+          <label for="pref_id">ご希望の面積</label>
+              <select name="col_28" data-native-menu="true">
+     <option value="">選択してください</option>
+     <option value="40m2未満">40m2未満</option>
+     <option value="40m2〜">40m2〜</option>
+     <option value="50m2〜">50m2〜</option>
+     <option value="60m2〜">60m2〜</option>
+     <option value="65m2〜">65m2〜</option>
+     <option value="70m2〜">70m2〜</option>
+     <option value="75m2〜">75m2〜</option>
+     <option value="80m2〜">80m2〜</option>
+     <option value="85m2〜">85m2〜</option>
+     <option value="90m2〜">90m2〜</option>
+     <option value="100m2〜">100m2〜</option>
+     <option value="110m2〜">110m2〜</option>
+     <option value="120m2〜">120m2〜</option>
+     <option value="130m2〜">130m2〜</option>
+    </select>
+ 
+          <label for="pref_id">ご予算</label>
+              <select name="col_29" data-native-menu="true">
+     <option value="">選択してください</option>
+     <option value="〜2400万円">〜2400万円</option>
+     <option value="〜2600万円">〜2600万円</option>
+     <option value="〜2800万円">〜2800万円</option>
+     <option value="〜3000万円">〜3000万円</option>
+     <option value="〜3200万円">〜3200万円</option>
+     <option value="〜3400万円">〜3400万円</option>
+     <option value="〜3600万円">〜3600万円</option>
+     <option value="〜3800万円">〜3800万円</option>
+     <option value="〜4000万円">〜4000万円</option>
+     <option value="〜4200万円">〜4200万円</option>
+     <option value="〜4400万円">〜4400万円</option>
+     <option value="〜4600万円">〜4600万円</option>
+     <option value="〜4800万円">〜4800万円</option>
+     <option value="〜5000万円">〜5000万円</option>
+     <option value="〜5200万円">〜5200万円</option>
+     <option value="〜5400万円">〜5400万円</option>
+     <option value="〜5600万円">〜5600万円</option>
+     <option value="〜5800万円">〜5800万円</option>
+     <option value="〜6000万円">〜6000万円</option>
+     <option value="〜6200万円">〜6200万円</option>
+     <option value="〜6400万円">〜6400万円</option>
+     <option value="〜6600万円">〜6600万円</option>
+     <option value="〜6800万円">〜6800万円</option>
+     <option value="〜7000万円">〜7000万円</option>
+     <option value="〜7500万円">〜7500万円</option>
+     <option value="〜8000万円">〜8000万円</option>
+     <option value="〜8500万円">〜8500万円</option>
+     <option value="〜9000万円">〜9000万円</option>
+     <option value="〜一億円">〜一億円</option>
+     <option value="一億円〜">一億円〜</option>
+    </select>
+ 
+          <label for="pref_id">ご希望の地域</label>
+              <select name="col_30" data-native-menu="true">
+     <option value="">選択してください</option>
+     <option value="東京23区">東京23区</option>
+     <option value="東京都下">東京都下</option>
+     <option value="神奈川">神奈川</option>
+     <option value="千葉">千葉</option>
+     <option value="埼玉">埼玉</option>
+     <option value="その他">その他</option>
+    </select>
+          
+          <div class="regist">
+           <a href="http://www.ober.jp/members/agreement.html" target="_brank">クラブオーベル会員規約</a>への同意
+           <input type="checkbox" name="agree2" id="club" value="同意する"  />
+           <label for="club">同意する</label><br />
+           <a href="http://www.ober.jp/members/request/privacy.html" target="_brank">クラブオーベル個人情報保護規約</a><br />への同意
+           <input type="checkbox" name="agree1" id="privacy2" value="同意する"  />
+           <label for="privacy2">同意する</label>
+          </div>
+          
+      <div class="toSiryoConfirm">
+        <a href="#" data-ajax="false" onclick="my_submit('confirm')"><img src="https://ober.dga.jp/new_sp/images/toSiryoConfirm_text_sp.png" alt="同意し、確認画面へ進む" width="300" /></a>
+        <a class="ui-btn ui-btn-icon-left ui-btn-corner-all ui-shadow ui-btn-up-d" data-theme="d" href="javascript:history.back()" data-role="button" data-icon="back" data-transition="slide"><span class="ui-btn-inner ui-btn-corner-all"><span class="ui-btn-text">前のページへ戻る</span><span class="ui-icon ui-icon-back ui-icon-shadow"></span></span></a>
+        
+      </div>
+      <br />
+    </form>
+  </div>
+</div>
+<script type='text/javascript' src='https://formassist.jp/FormAssist_tag.js?user=yuraku1&num=20110628114326'></script>
+</body>
+
+</html>
+ 
+ 
+ 
+ 
+

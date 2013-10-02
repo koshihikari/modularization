@@ -1,0 +1,161 @@
+﻿/*IE――――――――――――――――――――――――――――――――――――――――――――――――――*/
+body#bodyID .focus {
+	background: #ffffe5 !important;
+}
+body#bodyID .tdfocusmen {
+	background: #CEDEEF !important;
+}
+body#bodyID .tdfocus {
+	background: #CEDEEF !important;
+}
+body#bodyID .privacyTd{
+	background:transparent;
+}
+body#bodyID .tdfocuslabel{
+	color:#0066ff;
+}
+
+/*IE――――――――――――――――――――――――――――――――――――――――――――――――――*/
+html.ie body#bodyID #float {
+	position:fixed;
+	bottom: 5px;
+	right: 5px;
+	height: 70px;
+	width: 23%;
+	line-height: 1.0rem;
+	background:rgb(0,43,163);/*IE向け*/
+
+	color:white;
+	text-align : center ;
+}
+html.ie body#bodyID input[type="text"],
+html.ie body#bodyID select{
+	background: transparent;
+}
+html.ie body#bodyID{
+	width: 100%;
+	height: 100%;
+}
+
+/*Else Blowser――――――――――――――――――――――――――――――――――――――――――――――――――*/
+html.elseBL body#bodyID #float {
+	position: fixed;
+	bottom: 5px;
+	right: 5px;
+	height: 40px;
+	width: 23%;
+	padding:10px;
+
+	background:rgba(0,43,163, 0.8);
+			/*その他向け*/
+
+	color:white;
+
+	border-radius: 5px 5px 5px 5px;
+	margin: 0 1% 0 80%;
+}
+
+/*IE9――――――――――――――――――――――――――――――――――――――――――――――――――*/
+html.ie9 body#bodyID #float {
+	position:fixed;
+	bottom: 5px;
+	right: 5px;
+	height: 70px;
+	width: 23%;
+	line-height: 1.0rem;
+	background:rgb(0,43,163);/*IE向け*/
+
+	color:white;
+	text-align : center ;
+}
+html.ie9 body#bodyID input[type="text"],
+html.ie9 body#bodyID select{
+	background: transparent;
+}
+html.ie9 body#bodyID{
+	width: 100%;
+	height: 100%;
+}
+/*共通――――――――――――――――――――――――――――――――――――――――――――――――――*/
+body#bodyID td.ValidationRadioTd label.MouseoverRadioEvent{
+	margin: 0 15px;
+}
+body#bodyID .ecolor{
+	background: white;
+}
+body#bodyID #lblAcceptProcess{
+	border: none;
+	background: transparent;
+}
+body#bodyID #privacyID{
+	background: white;
+}
+body#bodyID .MouseoverNow{
+	background: #cedeef !important;
+}
+body#bodyID .blank {
+	background: #ffdddd !important;
+}
+body#bodyID .CursorFocusNow{
+	background: #ffffe5 !important;
+}
+body#bodyID .MouseoverRadioNow{
+	color: #0066ff;
+}
+body#bodyID .MouseoverRadioNow a{
+	color: #ff2c62  !important;
+}
+body#bodyID #B1{
+	display: none;
+}
+body#bodyID span.NT_hifun{
+	margin : 0 5px;
+}
+body#bodyID span.NT_zenkaku{
+	margin-left: 20px;
+}
+html.elseBL body#bodyID input[type="checkbox"],
+html.elseBL body#bodyID input[type="radio"],
+html.elseBL body#bodyID span{
+	vertical-align: middle !important;
+}
+body#bodyID #purposeTdID > label{
+	margin: 0 20px 0 2px;
+}
+html.ie body#bodyID #purposeTdID > label>input,
+html.ie9 body#bodyID #purposeTdID > label>span{
+	margin: 0 20px 0 2px;
+}
+
+
+body#bodyID #txtYear{
+	width: 55px !important;
+}
+body#bodyID #txtMonth,
+body#bodyID #txtDay{
+	width: 35px !important;
+}
+body#bodyID #txtAge{
+	width: 35px !important;
+	margin-left: 156px;
+}
+
+html.ie body#bodyID #purposeTdID span{
+	margin-right: 25px;
+}
+body#bodyID #frmRegist #txtSeiName,
+body#bodyID #frmRegist #txtMeiName,
+body#bodyID #frmRegist #txtSeiKana,
+body#bodyID #frmRegist #txtMeiKana,
+body#bodyID #frmRegist #txtSeiName,
+{
+	width: 80px !important;
+}
+body#bodyID #frmRegist #txtFirstCode,
+{
+	width: 50px !important;
+}
+body#bodyID #frmRegist #txtLastCode,
+{
+	width: 55px !important;
+}

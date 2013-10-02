@@ -1,0 +1,166 @@
+﻿		.formError .formErrorArrow .line10 {
+			width: 19px;
+	background: #187fc6;
+		} 
+		.formError .formErrorArrow .line9 {
+			width: 17px;
+	background: #187fc6;
+		} 
+		.formError .formErrorArrow .line8 {
+			width: 15px;
+	background: #187fc6;
+		} 
+		.formError .formErrorArrow .line7 {
+			width: 13px;
+	background: #187fc6;
+		} 
+		.formError .formErrorArrow .line6 {
+			width: 11px;
+	background: #187fc6;
+		} 
+		.formError .formErrorArrow .line5 {
+			width: 9px;
+	background: #187fc6;
+		} 
+		.formError .formErrorArrow .line4 {
+			width: 7px;
+	background: #187fc6;
+		} 
+		.formError .formErrorArrow .line3 {
+			width: 5px;
+	background: #187fc6;
+		} 
+		.formError .formErrorArrow .line2 {
+			width: 3px;
+	background: #187fc6;
+		}
+		.formError .formErrorArrow .line1{
+			width: 1px;
+	background: #187fc6;
+		}  
+div.formErrorMsg.formErrorContent{
+	background: #187fc6;
+	width:auto;
+	font-size: 0.6rem !important;
+	padding: 3px 3px 2px 3px;
+	/*display: inline !important;*/
+}
+.formErrorClose{
+	background: #187fc6 !important;
+	border: #187fc6 !important;
+	display: none !important;
+}
+#popup .blank {
+	background: #ffdddd !important;
+}
+.focus {
+	background: rgb(255, 247, 225) !important;
+}
+.tdfocusmen {
+	background: #CEDEEF !important;
+
+		/*margin: 20px !important;
+		border: 5px solid blue !important;*/
+
+/*	-webkit-transition: 0.2s ease-in-out;  
+    -moz-transition: 0.2s ease-in-out;  
+    -o-transition: 0.2s ease-in-out;  
+    transition: 0.2s ease-in-out;  */
+}
+.tdfocuswomen {
+	/*background: #EFF5F9 !important;*/	
+		/*margin: 20px !important;
+		border: 5px solid rgb(255, 180, 225) !important;*/
+}
+.tdfocus {
+	background: #CEDEEF !important;
+		/*margin: 20px !important;
+		border: 2px solid #4f4242 !important;*/
+}
+iframe[src='Inc/kojin_ichiran.html']{
+	/*display: none;*/
+}
+#float {
+	bottom: 0;
+	right: 0;
+	position: fixed;
+	/*z-index: 999;*/
+	/*margin-left:-160px;*/
+	height: 40px;
+	width: 23%;
+	padding:10px;
+	background:rgb(172, 213, 213);/*IE向け*/
+	background:rgba(172, 213, 213, 0.5);/*その他向け*/
+	background:rgba(172, 213, 100, 0.5);/*その他向け*/
+	background:rgba(60,145,217, 0.8);/*その他向け*/
+	background:rgba(0, 184, 255, 0.37);/*その他向け*/
+	background:rgba(3, 33, 255, 0.84);/*その他向け*/
+	border-radius: 5px 5px 5px 5px;
+	margin: 0 1% 0 80%;
+}
+#float *{
+	color: #E0E0E0 !important;
+}
+/*	height: 50px;
+	width: 10%;
+	padding:10px;
+	background:red;
+	border-radius: 5px 5px 5px 5px;
+	bottom: 0;*/
+ul.floatul{  
+	list-style-type: none;  
+	margin: 0;  
+	padding: 0; 
+	bottom: 0;
+}  
+
+li.floatli{  
+	/*background: black;*/
+	float: left;  
+	width: 4%;  
+	margin: 0;  
+	padding: 0;  
+	text-align: center;
+	bottom: 0;
+	padding: 10px 0;  
+
+  /*border: solid 6px #FFFFFF;*/
+}  
+  
+span.floatspan{  
+	text-align: center;  
+	display:block;  
+	width: 100%;  
+	color: white;  
+}  
+span.floatspan:hover{  
+	background-color: red;  
+	color: white;  
+} 
+span.countspantext1{  
+	text-align: center;  
+	display:block;  
+}
+span.countspantext2,
+span.countspantext3{  
+	text-align: center;  
+}
+#float span.countspanNum{  
+	text-align: center;  
+	color: red !important;
+	margin: 0 8px 0 8px;
+	font-size: 20px;
+	font-weight: bold;
+}
+span.countspanOk{  
+	text-align: center;
+	display: block;  
+	color: rgb(222, 222, 222);
+	margin: 0 8px 0 8px;
+	font-size: 15px;
+	font-weight: bold;
+}
+#float.countOk{  
+	background: rgb(38, 71, 115);
+	/*padding: 10px;*/
+}

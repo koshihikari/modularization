@@ -1,0 +1,21 @@
+﻿@charset "utf-8";
+#BoxDivLeftUpper,#BoxDivLeftLower,#BoxDivRightUpper,#BoxDivRightLower{
+	width:  300px;
+	height: 300px;
+	-webkit-border-radius: 150px;/* width,heightの半分 */
+	-moz-border-radius: 150px;
+	border-radius: 150px;
+	background-color: #999;/* 円の色 */
+}
+#BoxDivLeftUpper,#BoxDivLeftLower{
+	left: 0;
+}
+#BoxDivLeftUpper,#BoxDivRightUpper{
+	top: 0;
+}
+#BoxDivRightUpper,#BoxDivRightLower{
+	right: 0;
+}
+#BoxDivLeftLower,#BoxDivRightLower{
+	bottom: 0;
+}

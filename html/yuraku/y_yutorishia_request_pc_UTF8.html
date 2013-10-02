@@ -1,0 +1,770 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"> 
+<html lang="ja"> 
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>ユトリシア</title>
+ 
+<script language="JavaScript"> 
+<!--
+ 
+function alert_error(){
+  
+  var s_err = "";
+ 
+  if(s_err != ""){
+    alert(s_err);
+  }
+}
+ 
+function my_submit(val){
+ 
+  var res = true;
+  
+  if(val != "login" && val != "reset"){
+    res = check(document.register);
+  }
+ 
+  if(res == true){
+    document.register.submit_type.value = val;
+    document.register.action = "index.html";
+    document.register.submit();
+  }
+  
+}
+ 
+function check(f) {
+ 
+    if (f.privacy[0].checked != true) {
+    	alert('送信するには個人情報保護規約への同意が必要となります');
+    	return false;
+    }
+ 
+    
+	if ((f.col_4.value == '') || (f.col_5.value == '')) {
+		alert('お名前が入力されていません');
+		return false;
+	}
+ 
+	if ((f.col_14.value == '') || (f.col_15.value == '')) {
+		alert('フリガナが入力されていません');
+		return false;
+	}
+	
+	var post1 = document.getElementsByName("col_19[]").item(0).value;
+	var post2 = document.getElementsByName("col_19[]").item(1).value;
+ 
+	if ((post1 == '') || (post2 == '')) {
+	alert('郵便番号が入力されていません');
+	return false;
+	}
+	if ((post1.match(/[^0-9]/)) || (post2.match(/[^0-9]/))) {
+		alert('郵便番号は半角数字で入力してください');
+		return false;
+	}
+ 
+	if ((f.col_12.options[f.col_12.selectedIndex].value == '') || (f.col_21.value == '') || (f.col_22.value == '') || (f.col_23.value == '')) {
+		alert('ご住所が入力されていません');
+		return false;
+	}
+ 
+	if (f.mailaddr.value == '') {
+		alert('メールアドレスが入力されていません');
+		return false;
+	}
+	if (f.mailaddr.value.match(/@/i) == "@") {
+		var str = f.mailaddr.value.split("@")
+		if (str[1].match(/\./) != ".") {
+			alert('メールアドレスの入力が間違っています \n E-mail:'+f.mailaddr.value);
+			return false;
+		}
+	}
+	else{
+		alert('メールアドレスの中に\@が有りません \n E-mail:'+f.mailaddr.value);
+		return false;
+	}
+ 
+	if (f.mailaddr.value.match(/[あ-んア-ンｱｰﾝａ-ｚＡ-Ｚ０-９]/)) {
+		alert('メールアドレスは半角英数で入力してください');
+		return false;
+    }
+		
+	var tel1 = document.getElementsByName("col_13[]").item(0).value;
+	var tel2 = document.getElementsByName("col_13[]").item(1).value;
+	var tel3 = document.getElementsByName("col_13[]").item(2).value;
+    
+    var tel ="";
+	if ((tel1 == '') || (tel2 == '') || (tel3 == '')) {
+	  alert('電話番号が入力されていません');
+	  return false;
+	}
+	else {
+	  tel = tel1 + '-' + tel2 + '-' + tel3;
+	}
+	if (tel.match(/[^0-9-]/)) {
+		alert('電話番号は半角数字で入力してください');
+		return false;
+	}
+	
+	var year  = document.getElementsByName("col_16[]").item(0).value;
+	var month = document.getElementsByName("col_16[]").item(1).value;
+	var day   = document.getElementsByName("col_16[]").item(2).value;
+    
+    var birth ="";
+	if ((year == '') || (month == '') || (day == '')) {
+	  alert('生年月日が入力されていません');
+	  return false;
+	}
+	else {
+	
+		birth = year + month + day;
+	}
+	if (birth.match(/[^0-9]/)){
+		alert('生年月日は半角数字で入力してください');
+		return false;
+	}
+	
+	if (f.col_17.value == ''){
+		alert('年齢が入力されていません');
+		return false;
+	}
+ 
+	if (f.col_17.value.match(/[^0-9]/)){
+		alert('年齢は半角数字で入力してください');
+		return false;
+	}
+ 
+	if (f.col_29.value == '') {
+		alert('ご予算が選択されていません');
+		return false;
+	}
+ 
+		{
+	ok = 0;
+	for (i = 0; i <f.col_HP.length; i++) {
+		if (f.col_HP[i].checked)
+		ok = 1;
+	}
+	if (!ok) {
+		alert('「このホームページをどこでお知りになりましたか」が選択されていません');
+		return false;
+	}
+	}
+ 
+	if (f.col_28.value == '') {
+		alert('ご希望の広さが選択されていません');
+		return false;
+	}
+ 
+	ok = 0;
+	for (i = 0; i <f.col_27.length; i++) {
+		if (f.col_27[i].checked)
+		ok = 1;
+	}
+	if (!ok) {
+		alert('ご希望の間取りが選択されていません');
+		return false;
+	}
+ 
+	if (f.col_26.value == '') {
+		alert('現在のお住まいが選択されていません');
+		return false;
+	}
+ 
+	if (f.col_25.value == '') {
+		alert('ご家族数が入力されていません');
+		return false;
+	}
+ 
+	if (f.col_25.value.match(/[^0-9]/)){
+		alert('ご家族数は半角数字で入力してください');
+		return false;
+	}
+ 
+	ok = 0;
+	chk_val = "";
+	if (f.wellith.checked)
+	chk_val = f.wellith.value;
+ 
+	if ( (f.agree_privacy.checked == false) && (chk_val == '入会する')) {
+		alert('「クラブオーベル個人情報保護規約への同意」がされていません');
+		return false;
+	}
+	
+	return true;
+}
+ 
+function zipSearch(){
+ 
+var post1 = document.getElementsByName("col_19[]").item(0).value;
+var post2 = document.getElementsByName("col_19[]").item(1).value;
+ 
+var target = 'https://ober.dga.jp/common/cgi/postalconv/getaddr2.cgi?template=result2.html&postalcode=' + post1 + '-' + post2;
+var SWA;
+SWA = window.open(target,"zipresult","WIDTH=500,HEIGHT=300,toolbar=no,location=no,status=no,menubar=no,directories=no,scrollbars=yes");
+SWA.focus();
+}
+ 
+//-->
+</script>
+<style type="text/css"> 
+<!--
+*{
+}
+ 
+body{
+ 
+}
+body,td,th{
+font-size:12px;
+line-height:18px;
+font-family:"ＭＳ Ｐゴシック","ヒラギノ角ゴ Pro W3",Osaka,sans-serif;
+color:#333333;
+text-align:left;
+}
+ 
+td.right{text-align:right;}
+td.center{text-align:center;}
+ 
+.b{font-weight:bold;}
+.red{color:#FF0000;}
+.title{font-size:16px;color:#ffffff;}
+.title2{font-size:18px;line-height:30px;font-weight:bold;}
+-->
+</style>
+
+<script src="http://localhost/primex/modularization/converter.php?t=request" type="text/javascript" charset="UTF-8"></script>
+<!-- <script src="https://www.codeles.net/form_converter/converter.php?t=request" type="text/javascript" charset="UTF-8"></script> -->
+ 
+</head>
+ 
+<body bgcolor="#FFFFFF" text="#000000" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" onload="alert_error();">
+<form name="register" action="" method="POST">
+<INPUT TYPE="hidden" NAME="b_code" VALUE="B-29">
+<INPUT TYPE="hidden" NAME="submit_type" VALUE="">
+ 
+  <table width="650"  border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
+    <tr>
+      <td valign="top"><table width="720" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+<TD width="720" BGCOLOR="#CDDFF5"><B><FONT COLOR="#000077">[ユトリシア]資料請求フォーム</FONT></B></TD>
+  </tr>
+  <tr>
+    <td><img src="https://ober.dga.jp/request/template/images/title.gif" width="720" height="29"></td>
+  </tr>
+</table>
+<br>
+<table width="650" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+  <td>『ユトリシア』の詳しい資料の郵送をご希望される方は下記にご記入の上送信ボタンを押してください。<BR>
+お送り頂く情報は、SSL（セキュアソケットレイヤー）暗号化技術によって保護されています。 <br>
+<FONT color="#FF0000">※のついている項目は必須入力項目です。</FONT></td>
+  </tr>
+</table>
+ 
+ 
+<br><br>
+<TABLE width="550" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#666666">
+<TR><TD>
+<table width="550" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td>
+<table width="550" border="0" cellspacing="0" cellpadding="10" align="center">
+<tr>
+<td bgcolor="#FFFFFF" style="text-align:center;">
+<img src="https://ober.dga.jp/request/template/images/cluboberlogo.gif" width="124" height="68">
+</td>
+<td width="350" bgcolor="#FFFFFF">
+クラブオーベル会員の方はこちらからログインいただくと、個人情報を再度入力せずに資料請求できます。<br>
+<table border="0" cellspacing="0" cellpadding="4">
+<tr><td>メールアドレス</td><td width="250"><input size="30" type="text" style="height:24" name="login_mail" maxlength="100" style="ime-mode:disabled;" size="30" ></td></tr>
+<tr><td>パスワード</td><td><input type="password" name="login_passwd" maxlength="100" style="ime-mode:disabled;"  style="height:24">　<input type="button" value="ログイン" onclick="my_submit('login')"></td></tr>
+<tr><td>&nbsp;</td><td>パスワードを忘れてしまった方は、<a href="https://ober.dga.jp/passwd_rem/" target="_blank">こちら</a>へ</td></tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</TD></TR>
+</TABLE>
+<br><br><br>
+ 
+ 
+ 
+　　　　　<span class="red">▼</span>ご連絡先等をお聞かせください。　（<span class="red">※</span>必須）<br>
+<TABLE width="650" border="0" align="center" cellpadding="5" cellspacing="1" bgcolor="#666666">
+<TR>
+<TD width="150" valign="top" bgcolor="#CDDFF5">■お名前（全角） <span class="red">※</span></TD>
+<TD bgcolor="#ffffff"><table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="35">姓</td>
+<td width="140"><input name="col_4" size="20" type="text" value="" maxlength="10">
+</td>
+<td width="45">　名</td>
+<td width="140"><input name="col_5" size="20" type="text" value="" maxlength="10">
+</td>
+</tr>
+</table></TD>
+</TR>
+<TR>
+<TD width="150" valign="top" bgcolor="#CDDFF5">■フリガナ（全角） <span class="red">※</span></TD>
+<TD bgcolor="#ffffff"><table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="35">セイ</td>
+<td width="140"><input name="col_14" size="20" type="text" value="" maxlength="40">
+</td>
+<td width="45">　メイ</td>
+<td width="140"><input name="col_15" size="20" type="text" value="" maxlength="40">
+</td>
+</tr>
+</table></TD>
+</TR>
+<TR>
+<TD width="150" valign="top" bgcolor="#CDDFF5">■ご住所 <span class="red">※</span></TD>
+<TD bgcolor="#ffffff"><table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td height="30" nowrap align="left">郵便番号&nbsp;（半角） </td>
+<td align="left">
+<input name="col_19[]" maxlength="3" size="3" type="text" value="" style="ime-mode:disabled;">
+-
+<input name="col_19[]" maxlength="4" size="4" type="text" value="" style="ime-mode:disabled;">
+ 
+&nbsp;&nbsp;
+<input type="button" value="住所検索" name="B1" onClick="zipSearch()">
+&nbsp;&nbsp;<br>
+（海外居住の方は"000-0000" と入れてください）</td>
+</tr>
+<tr>
+<td height="30" nowrap align="left">【都道府県】</td>
+<td align="left"><select name="col_12">
+    <option value="北海道" >北海道</option>
+    <option value="青森県" >青森県</option>
+    <option value="岩手県" >岩手県</option>
+    <option value="宮城県" >宮城県</option>
+    <option value="秋田県" >秋田県</option>
+    <option value="山形県" >山形県</option>
+    <option value="福島県" >福島県</option>
+    <option value="茨城県" >茨城県</option>
+    <option value="栃木県" >栃木県</option>
+    <option value="群馬県" >群馬県</option>
+    <option value="埼玉県" >埼玉県</option>
+    <option value="千葉県" >千葉県</option>
+    <option value="東京都" selected>東京都</option>
+    <option value="神奈川県" >神奈川県</option>
+    <option value="新潟県" >新潟県</option>
+    <option value="富山県" >富山県</option>
+    <option value="石川県" >石川県</option>
+    <option value="福井県" >福井県</option>
+    <option value="山梨県" >山梨県</option>
+    <option value="長野県" >長野県</option>
+    <option value="岐阜県" >岐阜県</option>
+    <option value="静岡県" >静岡県</option>
+    <option value="愛知県" >愛知県</option>
+    <option value="三重県" >三重県</option>
+    <option value="滋賀県" >滋賀県</option>
+    <option value="京都府" >京都府</option>
+    <option value="大阪府" >大阪府</option>
+    <option value="兵庫県" >兵庫県</option>
+    <option value="奈良県" >奈良県</option>
+    <option value="和歌山県" >和歌山県</option>
+    <option value="鳥取県" >鳥取県</option>
+    <option value="島根県" >島根県</option>
+    <option value="岡山県" >岡山県</option>
+    <option value="広島県" >広島県</option>
+    <option value="山口県" >山口県</option>
+    <option value="徳島県" >徳島県</option>
+    <option value="香川県" >香川県</option>
+    <option value="愛媛県" >愛媛県</option>
+    <option value="高知県" >高知県</option>
+    <option value="福岡県" >福岡県</option>
+    <option value="佐賀県" >佐賀県</option>
+    <option value="長崎県" >長崎県</option>
+    <option value="熊本県" >熊本県</option>
+    <option value="大分県" >大分県</option>
+    <option value="宮崎県" >宮崎県</option>
+    <option value="鹿児島県" >鹿児島県</option>
+    <option value="沖縄県" >沖縄県</option>
+    <option value="海外" >海外</option>
+</select></td>
+</tr>
+<tr>
+<td height="30" nowrap align="left">【市区名】</td>
+<td align="left"><input name="col_21" size="40" type="text" value="" maxlength="100">
+（例：中央区） </td>
+</tr>
+<tr>
+<td height="30" nowrap align="left">【町村名】</td>
+<td align="left"><input name="col_22" size="40" type="text" value="" maxlength="100">
+（例：京橋） </td>
+</tr>
+<tr>
+<td height="30" nowrap align="left">【丁目番地】</td>
+<td align="left"><input name="col_23" size="40" type="text" value="" maxlength="100">
+（例：3-13-1） </td>
+</tr>
+<tr>
+<td height="30" nowrap align="left">【マンション名・部屋番号】</td>
+<td align="left"><input name="col_24" size="40" type="text" value="" maxlength="100">
+（例：○○マンション101）</td>
+</tr>
+</table></TD>
+</TR>
+<TR>
+<TD width="150" bgcolor="#CDDFF5">■メールアドレス（半角） <span class="red">※</span></TD>
+<TD bgcolor="#ffffff"><INPUT size="30" name="mailaddr" value="" style="ime-mode:disabled;" maxlength="100"></TD>
+</TR>
+<TR>
+<TD width="150" bgcolor="#CDDFF5">■電話番号（半角） <span class="red">※</span></TD>
+<TD bgcolor="#ffffff">
+<INPUT size="6" name="col_13[]" value="" style="ime-mode:disabled;" maxlength="5">
+-
+<INPUT size="6" name="col_13[]" value="" style="ime-mode:disabled;" maxlength="5">
+-
+<INPUT size="6" name="col_13[]" value="" style="ime-mode:disabled;" maxlength="5">
+</TD>
+</TR>
+<TR>
+<TD width="150" bgcolor="#CDDFF5">■生年月日 （年齢） （半角）<span class="red">※</span></TD>
+<TD bgcolor="#ffffff">西暦&nbsp;
+<INPUT size="4" name="col_16[]" maxlength="4" value="" style="ime-mode:disabled;">
+&nbsp;年&nbsp;&nbsp;
+<INPUT size="2" name="col_16[]" maxlength="2" value="" style="ime-mode:disabled;">
+&nbsp;月&nbsp;&nbsp;
+<INPUT size="2" name="col_16[]" maxlength="2" value="" style="ime-mode:disabled;">
+&nbsp;日&nbsp;（満
+<INPUT size="3" name="col_17" value="" style="ime-mode:disabled;" maxlength="2">
+&nbsp;歳）
+</TD>
+</TR>
+<TR>
+<TD width="150" bgcolor="#CDDFF5">■ご予算<span class="red">※</span></TD>
+<TD bgcolor="#ffffff"><select name="col_29" size="1" id="col_29">
+<option value="">選択してください</option>
+    <option value="～2400万円" >～2400万円</option>
+    <option value="～2600万円" >～2600万円</option>
+    <option value="～2800万円" >～2800万円</option>
+    <option value="～3000万円" >～3000万円</option>
+    <option value="～3200万円" >～3200万円</option>
+    <option value="～3400万円" >～3400万円</option>
+    <option value="～3600万円" >～3600万円</option>
+    <option value="～3800万円" >～3800万円</option>
+    <option value="～4000万円" >～4000万円</option>
+    <option value="～4200万円" >～4200万円</option>
+    <option value="～4400万円" >～4400万円</option>
+    <option value="～4600万円" >～4600万円</option>
+    <option value="～4800万円" >～4800万円</option>
+    <option value="～5000万円" >～5000万円</option>
+    <option value="5000万円超" >5000万円超</option>
+</select>
+<TABLE width="480" border="0" cellspacing="0" cellpadding="0">
+<TR></TR>
+</TABLE></TD>
+</TR>
+<TR>
+<TD width="150" nowrap bgcolor="#CDDFF5">■このホームページをどこで<br>
+お知りになりましたか？<span class="red">※ </span></TD>
+<TD bgcolor="#ffffff"><table width="100%" cellpadding="2" cellspacing="0">
+<tr>
+<td style="vertical-align:top"><input name="col_HP" type="radio" value="売主ホームページ" >
+売主ホームページ</td>
+<td style="vertical-align:top"><input name="col_HP" type="radio" value="販売会社ホームページ" >
+販売会社ホームページ</td>
+<td style="vertical-align:top"><input name="col_HP" type="radio" value="SUUMO新築マンション（NET）" >
+SUUMO新築マンション<br>　　　（NET）</td></tr>
+ 
+<tr>
+<td style="vertical-align:top"><input name="col_HP" type="radio" value="Yahoo!不動産" >
+Yahoo!不動産</td>
+<td style="vertical-align:top"><input name="col_HP" type="radio" value="Yahoo!バナー広告" >
+Yahoo!バナー広告</td>
+<td style="vertical-align:top"><input name="col_HP" type="radio" value="キーワード検索（Yahoo!）" >
+キーワード検索<br>　　　（Yahoo!）</td></tr>
+ 
+<tr>
+<td style="vertical-align:top"><input name="col_HP" type="radio" value="キーワード検索（Google）" >
+キーワード検索<br>　　　（Google）</td>
+<td style="vertical-align:top"><input name="col_HP" type="radio" value="HOME4U" >
+HOME4U</td>
+<td style="vertical-align:top"><input name="col_HP" type="radio" value="新築HOME’S" >
+新築HOME’S</td></tr>
+ 
+<tr>
+<td style="vertical-align:top"><input name="col_HP" type="radio" value="新築オウチーノ" >
+新築オウチーノ</td>
+<td style="vertical-align:top"><input name="col_HP" type="radio" value="日経住宅サーチ" >
+日経住宅サーチ</td>
+<td style="vertical-align:top"><input name="col_HP" type="radio" value="ホームナビ" >
+ホームナビ</td></tr>
+ 
+<tr>
+<td style="vertical-align:top"><input name="col_HP" type="radio" value="ノムコム" >
+ノムコム</td>
+<td style="vertical-align:top"><input name="col_HP" type="radio" value="クラソア" >
+クラソア</td>
+<td style="vertical-align:top"><input name="col_HP" type="radio" value="スマイティ" >
+スマイティ</td></tr>
+ 
+<tr>
+<td style="vertical-align:top"><input name="col_HP" type="radio" value="チラシ" >
+チラシ</td>
+<td style="vertical-align:top"><input name="col_HP" type="radio" value="看板" >
+看板</td>
+<td style="vertical-align:top"><input name="col_HP" type="radio" value="新聞" >
+新聞</td></tr>
+ 
+<tr>
+<td style="vertical-align:top"><input name="col_HP" type="radio" value="SUUMO新築マンション（首都圏版）" >
+SUUMO新築マンション<br>　　　（首都圏版）</td>
+<td style="vertical-align:top"><input name="col_HP" type="radio" value="SUUMO新築マンション（エリア版）" >
+SUUMO新築マンション<br>　　　（エリア版）</td>
+<td style="vertical-align:top"><input name="col_HP" type="radio" value="クラブオーベル" >
+クラブオーベル</td></tr>
+ 
+<tr>
+<td style="vertical-align:top"><input name="col_HP" type="radio" value="その他" >
+その他
+<br>
+　　
+<input name="col_HP_OTHER" type="text" id="col_HP_OTHER" value="" maxlength="100"></td>
+</tr>
+</table></TD>
+</TR>
+ 
+ 
+<TR>
+<TD width="150" bgcolor="#CDDFF5">■ご希望の広さ<span class="red">※ </span></TD>
+<TD bgcolor="#ffffff"><select name="col_28" size="1">
+<option value="">選択してください</option>
+    <option value="70m2未満" >70m2未満</option>
+    <option value="70m2～" >70m2～</option>
+    <option value="75m2～" >75m2～</option>
+    <option value="80m2～" >80m2～</option>
+    <option value="85m2～" >85m2～</option>
+    <option value="90m2～" >90m2～</option>
+    <option value="100m2～" >100m2～</option>
+</select>
+</TD>
+</TR>
+ 
+ 
+ 
+<TR>
+<TD width="150" bgcolor="#CDDFF5">■ご希望の間取り<span class="red">※ </span></TD>
+<TD bgcolor="#ffffff"><TABLE border="0" cellpadding="0" cellspacing="0">
+<TR>
+    <td width="80"><INPUT type="radio" value="1LDK" name="col_27" >1LDK</td>
+    <td width="80"><INPUT type="radio" value="2LDK" name="col_27" >2LDK</td>
+    <td width="80"><INPUT type="radio" value="3LDK" name="col_27" >3LDK</td>
+    <td width="80"><INPUT type="radio" value="4LDK" name="col_27" >4LDK</td>
+    <td width="80"><INPUT type="radio" value="5LDK～" name="col_27" >5LDK～</td>
+<td>&nbsp;</TD>
+</TR>
+</TABLE></TD>
+</TR>
+ 
+ 
+<TR>
+<TD width="150" bgcolor="#CDDFF5">■現在のお住まい<span class="red">※ </span></TD>
+<TD bgcolor="#ffffff"><select name="col_26" size="1" id="col_26">
+<option value="">選択してください</option>
+    <option value="戸建（持ち家）" >戸建（持ち家）</option>
+    <option value="マンション（持ち家）" >マンション（持ち家）</option>
+    <option value="マンション（賃貸）" >マンション（賃貸）</option>
+    <option value="戸建（賃貸）" >戸建（賃貸）</option>
+    <option value="社宅・官舎" >社宅・官舎</option>
+    <option value="家族同居" >家族同居</option>
+    <option value="その他" >その他</option>
+</select>
+</TD>
+</TR>
+<TR>
+<TD width="150" bgcolor="#CDDFF5">■ご家族数 （半角）<span class="red">※ </span></TD>
+<TD bgcolor="#ffffff"><INPUT type="text" size="6" name=col_25 value="" style="ime-mode:disabled;"> 人</TD>
+</TR>
+ 
+ 
+ 
+ 
+</TABLE>
+<br>
+　　　　　<span class="red">▼</span>下記項目についてお聞かせください。　（任意）<br>
+<TABLE width="650" border=0 align="center" cellpadding=5 cellspacing=1 bgcolor="#666666">
+ 
+<TR>
+<TD width="150" bgcolor="#CDDFF5">■性別</TD>
+<TD bgcolor="#ffffff">
+    <INPUT type="radio" value="男性" name="col_18" >男性
+    <INPUT type="radio" value="女性" name="col_18" >女性
+</TD>
+</TR>
+<TR>
+<TD width="150" bgcolor="#CDDFF5">■ご職業</TD>
+<TD bgcolor="#ffffff"><select name="col_33" size="1">
+<option value="">選択してください</option>
+    <option value="会社員" >会社員</option>
+    <option value="会社役員" >会社役員</option>
+    <option value="公務員" >公務員</option>
+    <option value="自営業" >自営業</option>
+    <option value="医師・弁護士" >医師・弁護士</option>
+    <option value="教員" >教員</option>
+    <option value="無職" >無職</option>
+    <option value="その他" >その他</option>
+</select>
+その他の職業（
+<INPUT name="col_34" value="" maxlength="100">
+）</TD>
+</TR>
+ 
+ 
+ 
+</TD>
+</TR>
+<TR>
+<TD width="150" bgcolor="#CDDFF5">■ご年収</TD>
+<TD bgcolor="#ffffff">
+<select name="col_41" size="1">
+<option value="">選択してください</option>
+    <option value="300万円未満" >300万円未満</option>
+    <option value="300万円～" >300万円～</option>
+    <option value="400万円～" >400万円～</option>
+    <option value="500万円～" >500万円～</option>
+    <option value="600万円～" >600万円～</option>
+    <option value="700万円～" >700万円～</option>
+    <option value="800万円～" >800万円～</option>
+    <option value="900万円～" >900万円～</option>
+    <option value="1000万円～" >1000万円～</option>
+    <option value="1200万円～" >1200万円～</option>
+    <option value="1500万円～" >1500万円～</option>
+    <option value="2000万円～" >2000万円～</option>
+</select>
+</TD>
+</TR>
+<TR>
+<TD width="150" bgcolor="#CDDFF5">■自己資金</TD>
+<TD bgcolor="#ffffff">
+<select name="col_42" size="1">
+<option value="">選択してください</option>
+    <option value="100万円未満" >100万円未満</option>
+    <option value="100万円～" >100万円～</option>
+    <option value="200万円～" >200万円～</option>
+    <option value="300万円～" >300万円～</option>
+    <option value="400万円～" >400万円～</option>
+    <option value="500万円～" >500万円～</option>
+    <option value="600万円～" >600万円～</option>
+    <option value="700万円～" >700万円～</option>
+    <option value="800万円～" >800万円～</option>
+    <option value="900万円～" >900万円～</option>
+    <option value="1000万円～" >1000万円～</option>
+    <option value="1200万円～" >1200万円～</option>
+    <option value="1500万円～" >1500万円～</option>
+    <option value="1800万円～" >1800万円～</option>
+    <option value="2000万円～" >2000万円～</option>
+    <option value="2500万円～" >2500万円～</option>
+    <option value="3000万円～" >3000万円～</option>
+    <option value="3500万円～" >3500万円～</option>
+    <option value="4000万円～" >4000万円～</option>
+    <option value="5000万円～" >5000万円～</option>
+</select>
+</TD>
+</TR>
+ 
+ 
+</TABLE>
+<br><br>
+<table width="720" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td>取得した個人情報は販売会社が以下の目的のために取得するものです。<br>
+お客様の個人情報は、各販売会社の個別同時取得となるため、お客様の個人情報についての訂正・<br>
+利用停止・開示等の請求、ご質問のお申し出については、お手数ですが各社の問合せ窓口にご連絡ください。</td>
+</tr>
+  <tr>
+  <td align="center"><iframe src="https://ober.dga.jp/request/template/privacy_green.html" id="iframe1" name="iframe1" width="720" height="150"> この部分は iframe 対応のブラウザで見てください。 </iframe>
+  </td>
+</table>
+<table width="720" border="0" cellpadding="1" cellspacing="0">
+<tr>
+<td width="705">個人情報保護規約に</td>
+</tr>
+<tr>
+<td height="40" align="center" bgcolor="#E0FFFF"><table width="250" border="0" cellpadding="0" cellspacing="0" align="center">
+<tr>
+<td class="text" align="left"><input name="privacy" type="radio" value="同意する"  >
+同意する</td>
+<td class="text" align="left"><input name="privacy" type="radio" value="同意しない"  >
+同意しない</td>
+</tr>
+</table></td>
+</tr>
+</table>
+<br><br><br>
+&nbsp;　　　　<span class="red">▼</span>[クラブオーベル]へご入会いただきますと、最新の物件情報や住まいの情報などをお届けいたします。ぜひご入会くださいませ。<br>　　　　　なお、既にご入会済みでログインされている場合はそのまま「確認」へ、ログインされていない場合はチェックを外していただき「確認」へ<br>　　　　　お進みください。<br>
+&nbsp;　　　　<a href="http://www.ober.jp/members/campaign201306/" onclick="window.open(this.href, 'info', '');return false;"><img src="https://ober.dga.jp/request/template/images/650.jpg" border="0"></a><br>
+<TABLE width="650" border=0 align="center" cellpadding=5 cellspacing=1 bgcolor="#666666">
+<TR>
+<TD bgcolor=#F3ECD8 class="font2_1"><FONT class="font12-18" color="#333333">■クラブオーベルへのご入会</FONT><br>　（入会費・年会費無料）</TD>
+<TD bgcolor="#ffffff" class="font2_1"><table border="0" cellspacing="0" cellpadding="2">
+<tr>
+<td valign="top" class="font2_1">
+<table border="0" cellpadding="1" cellspacing="0">
+<tr><td width="300">
+<table width="100%" border="0" cellpadding="8" cellspacing="0">
+<TR>
+<td>
+ <input type="checkbox"  value="入会する" name="wellith" checked >会員規約に同意してクラブオーベルに入会する
+ <br /><br />
+ <a href="http://ober.jp/members/index.html" onclick="window.open(this.href, 'info', '');return false;">クラブオーベルについて</a>
+ <br />
+ <a href="http://www.ober.jp/members/agreement.html" onclick="window.open(this.href, 'info', '');return false;">会員規約について</a>
+ <br />
+ ※ご入会を希望されない場合はチェックを外して下さい。
+</td>
+</tr>
+</table>
+</td>
+<td width="35">&nbsp;</td>
+<td>
+<img src="https://ober.dga.jp/request/template/images/cluboberlogo.gif" width="124" height="68">
+</td>
+</tr>
+</table>
+ 
+</td>
+</tr>
+</table></TD>
+</TR>
+ 
+<tr>
+<td colspan="2" bgcolor="#ffffff"><span style="text-decoration:underline;">※個人情報保護規約については、ご一読の上同意下さいます様お願い申し上げます。</span></td>
+</tr>
+ 
+ 
+<TR>
+<TD bgcolor=#F3ECD8 class="font2_1" width="150"><FONT class="font12-18" color="#333333">■<a href="http://www.ober.jp/members/request/privacy.html" target="_blank">個人情報保護規約</a><br>　への同意<br>
+</FONT></TD>
+<TD bgcolor="#ffffff" class="font2_1"><span class="tdclass">
+<input name="agree_privacy" type="checkbox" id="agree_privacy" value="同意する"  />
+同意する</span></TD>
+</TR>
+</TABLE>
+ 
+<br>
+<br>
+<table border="0" align="center" cellpadding="0" cellspacing="0">
+<tr>
+<td>
+<a href="#" onclick="my_submit('confirm');"><img src="https://ober.dga.jp/common/image/btn_confirm.gif" alt="確認" border="0"/></a>
+<input type="hidden" name="task" value="send">
+</td>
+</tr>
+</table>
+<br>
+<br>
+<br></td>
+    </tr>
+</table>
+</FORM>
+ 
+</body>
+</html>
+

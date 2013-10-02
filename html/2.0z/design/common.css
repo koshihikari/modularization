@@ -1,0 +1,157 @@
+body{
+    padding:0px;
+    margin:0px;
+}
+img{
+    border:none:
+}
+label {
+	display: block !important;
+	width:  100% !important;
+	clear: both;
+}
+
+
+
+
+.clearfix:after {
+  content: ".";  
+  display: block;  
+  clear: both;
+  height: 0;
+  visibility: hidden;
+}
+
+.clearfix {
+  min-height: 1px;
+}
+
+* html .clearfix {
+  height: 1px;
+  /*\*//*/
+  height: auto;
+  overflow: hidden;
+  /**/
+}
+
+
+.search {
+    position: relative;
+}
+
+.toSiryoConfirm {
+    text-align:center;
+}
+.toSiryoConfirm a:hover{
+	opacity:0.8;
+}
+
+.redtext {
+    color: #C90518;
+}
+
+
+.header .logo {
+	padding: 5px;	
+}
+.header a {
+	display:block;
+	padding: 8px;
+	border-bottom:10px solid #303031;
+	color:#000!important;
+	text-shadow:0 1px 0 #666;
+	text-decoration:none;
+	font-size:110%;
+	background: -moz-linear-gradient(top, #fff, #eee);
+	background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#eee));
+}
+.header.ober a {
+	padding: 0 5px 5px 5px;
+}
+
+.subttl {
+	padding:5px 20px;
+	background:#EBE9E0;
+}
+p.lead {
+	padding:5px 15px;
+	font-size:90%;
+}
+.login {
+	padding:5px 20px;
+	background:#EBE9E0;
+}
+.login p {
+	font-size:75%;
+}
+.login table {
+	width:100%;
+}
+.login th,
+.login td {
+	text-align:left;
+	font-size:70%;
+}
+.login th {
+	width:30%;
+}
+p.note {
+	margin-top:0;
+	margin-bottom:4px;
+	font-size:70%;
+}
+.login td input {
+	width:95%!important;
+}
+input.t2 {
+	width:8%!important;
+	display:inline-block!important;
+}
+input.t3 {
+	width:12%!important;
+	display:inline-block!important;
+}
+input.t4 {
+	width:16%!important;
+	display:inline-block!important;
+}
+input.t5 {
+	width:44%!important;
+	display:inline-block!important;
+}
+
+
+
+.zip .ui-btn {
+	width:40%!important;
+	display:inline-block!important;
+}
+.regist {
+	margin-top:2em;
+	margin-bottom:1em;
+	padding:10px 15px 12px 15px;
+	background:#EBE9E0;
+}
+dl.confirm {
+	margin:0;
+	padding:0;
+	border-top:1px solid #ccc;
+	border-left:1px solid #ccc;
+	border-right:1px solid #ccc;
+}
+dl.confirm dt {
+	padding:4px;
+	border-bottom:1px solid #ccc;
+	font-weight:bold;
+}
+dl.confirm dd {
+	margin:0;
+	padding:4px;
+	border-bottom:1px solid #ccc;
+}
+.footer {
+	margin:30px 0 0 0;
+	border-top:1px solid #666;
+	text-align:center;
+	font-size:55%;
+}

@@ -1,0 +1,329 @@
+﻿@charset "utf-8";
+
+body#bodyID form#formID .MouseoverNow{
+	background: #cedeef;
+	/*background: yellow;*/
+}
+body#bodyID form#formID .blank{
+	/*background: green;*/
+	background: #ffdddd;
+}
+
+
+body#bodyID form#formID label.blank{
+	/*background: green;*/
+	background: #ffdddd !important;
+}
+
+
+body#bodyID form#formID .error{
+	/*background: green;*/
+	background: blue;
+}
+body#bodyID form#formID .NT_appeal{
+	/*background: green;*/
+	color:orange;
+}
+body#bodyID form#formID div.blank label{
+	/*background: green;*/
+	background: #ffdddd;
+}
+body#bodyID form#formID #B1{
+	display: none;
+}
+body#bodyID form#formID input:focus{
+	background: #ffffe5;
+}
+body#bodyID form#formID span.blankMS{
+	color: #ed5600;
+}
+
+/*body#bodyID form#formID #boxID{
+	width: 60px;
+	height: 20px;
+}
+*/
+
+/*1文字*/
+body#bodyID form#formID input[nt_base_index="25"]
+,body#bodyID form#formID input[nt_base_index="26"]
+,body#bodyID form#formID input[nt_base_index="33"]
+{
+	width: 36px !important;
+}
+
+/*2文字*/
+body#bodyID form#formID input[nt_base_index="14"]
+,body#bodyID form#formID input[nt_base_index="17"]
+,body#bodyID form#formID input[nt_base_index="27"]
+{
+	width: 46px !important;
+}
+/*3文字*/
+body#bodyID form#formID input[nt_base_index="17"]
+{
+	width: 58px !important;
+}
+/*4文字*/
+body#bodyID form#formID input[nt_base_index="15"]
+,body#bodyID form#formID input[nt_base_index="16"]
+,body#bodyID form#formID input[nt_base_index="18"]
+,body#bodyID form#formID input[nt_base_index="24"]
+{
+	width: 64px !important;
+}
+
+body#bodyID form#formID #NT_dlforMS dd
+{
+	margin-left: 0;
+	margin-bottom: 8px;
+}
+body#bodyID form#formID #NT_dlforMS dd input
+{
+	margin-left: 2px;
+	margin-right: 2px;
+}
+body#bodyID form#formID #NT_dlforMS dd span.fortext
+{
+	margin-left: 2px;
+	margin-right: 2px;
+}
+body#bodyID form#formID #NT_dlforMS dd input[nt_base_index="17"]
+{
+	margin-right: 0;
+}
+body#bodyID form#formID #NT_dlforMS dd input[nt_base_index="18"]
+{
+	margin-left: 0;
+}
+
+/*エラーMS*/
+body#bodyID form#formID #NT_dlforMS div.NT_divforMS
+{
+	/*display: inline-block;*/
+	/*display: inline-flexbox;*/
+	display: inline-table;
+	/*display: table;*/
+}
+/*1 normal*/
+body#bodyID form#formID #NT_dlforMS div.NT_divforMS
+{
+	width: 100%;
+	vertical-align: top;
+}
+/*2 name*/
+body#bodyID form#formID #NT_dlforMS div.NT_divforMS[nt_dd_num="16_0"]
+,body#bodyID form#formID #NT_dlforMS div.NT_divforMS[nt_dd_num="16_1"]
+,body#bodyID form#formID #NT_dlforMS div.NT_divforMS[nt_dd_num="15_0"]
+,body#bodyID form#formID #NT_dlforMS div.NT_divforMS[nt_dd_num="15_1"]
+{
+	width: 47%;
+	margin-right: 3%;
+}
+/*2 yubin*/
+body#bodyID form#formID #NT_dlforMS div.NT_divforMS[nt_dd_num="12_0"]
+,body#bodyID form#formID #NT_dlforMS div.NT_divforMS[nt_dd_num="12_1"]
+{
+	width: 100px;
+	margin-right: 8px;
+}
+/*3 tel*/
+body#bodyID form#formID #NT_dlforMS div.NT_divforMS[nt_dd_num="13_0"]
+,body#bodyID form#formID #NT_dlforMS #divID3 div.NT_divforMS
+{
+	width: 75px;
+	margin-right: 12px;
+}
+body#bodyID form#formID #NT_dlforMS div.NT_divforMS[nt_dd_num="13_1"]
+{
+	width: 80px;
+	margin-right: 20px;
+}
+body#bodyID form#formID #NT_dlforMS div.NT_divforMS[nt_dd_num="13_2"]
+{
+	width: 80px;
+	margin-right: 0px;
+}
+/*3 seinen*/
+body#bodyID form#formID #NT_dlforMS div.NT_divforMS[nt_dd_num="6_0"]
+{
+	width: 95px;
+	margin-left: 35px;
+}
+body#bodyID form#formID #NT_dlforMS div.NT_divforMS[nt_dd_num="6_1"]
+,body#bodyID form#formID #NT_dlforMS div.NT_divforMS[nt_dd_num="6_2"]
+{
+	width: 70px;
+	margin-left: 8px;
+}
+body#bodyID form#formID #NT_dlforMS div.NT_divforMS[nt_dd_num="6_3"]
+{
+	margin-left: 35px;
+}
+/*―――――――――――――――――――――――――*/
+body#bodyID form#formID #NT_dlforMS dd.NT_NoMS
+{
+	display: none;
+}
+body#bodyID form#formID #divID3 input
+{
+	width: 45px !important;
+}
+body#bodyID form#formID #divID3 dd.NT_DD_R_1>span.fortext
+,body#bodyID form#formID #divID3 dd.NT_DD_R_0>span.fortext
+{
+	margin-left: 5px;
+	margin-right: 10px;
+}
+
+
+
+/*
+body#bodyID form#formID dt.NT_DT_4{
+  background-color: #333;
+  color: #fcac1a;
+  overflow: hidden;
+}
+*/
+
+/*
+body#bodyID form#formID dt.NT_DT_4 label {
+  padding-left: 100%;
+  display: inline-block;
+  white-space: nowrap;
+  -webkit-animation-name: ticker-animation;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-duration: 10s;
+}
+
+@-webkit-keyframes ticker-animation {
+  from   { -webkit-transform: translate(0%);}
+  99%,to { -webkit-transform: translate(-100%);}
+}
+*/
+
+
+
+
+
+#bodyID ul.floatul{  
+	list-style-type: none;  
+	margin: 0;  
+	padding: 0; 
+	bottom: 0;
+	position: absolute;
+    top: 50%;
+    margin-top: -1em;
+	height: 100%;
+	width: 100%;
+}  
+
+#bodyID li.floatli{  
+	float: left;  
+	width: 4%;  
+	margin: 0;  
+	padding: 0;  
+	text-align: center;
+	bottom: 0;
+	height: 100%;
+	/*padding: 10px 0;  */
+}  
+  
+#bodyID span.floatspan{  
+	text-align: center;  
+	display:block;  
+	width: 100%;  
+	color: white;  
+}  
+#bodyID span.floatspan:hover{  
+	background-color: red;  
+	color: white;  
+} 
+#bodyID span.countspantext1,
+#bodyID span.countspanOk{  
+	position: absolute;
+	text-align: center;
+	/*top: -10px;*/
+	top: 50%;
+	left: 50%;
+	display:block;  
+	font-size: 11px;
+	font-weight: lighter;
+	width: 60px;
+	height: 30px;
+	padding: 0;
+	margin: -40px 0 0 -30px;
+}
+#bodyID span.countspanOk{  
+	color: rgb(222, 222, 222);
+	font-size: 17px;
+	margin: -28px 0 0 -30px;
+}
+#bodyID span.countspantext2{  
+	text-align: center;  
+	display:block;
+	padding: 5px;
+}
+#bodyID span.countspantext21,
+#bodyID span.countspantext22{  
+}
+#bodyID span.countspanNum{  
+	color: red;
+	margin: 0 8px 0 8px;
+	font-size: 26px;
+	font-weight: bold;
+}
+#bodyID #float {
+	/*position: relative;/*draggableの実験*/*/
+	/*position: fixed;*/
+
+/*	bottom: 5px;
+	right: 5px;*/
+	height: 100%;
+	width: 100%;
+	/*padding:10px;*/
+
+	background:rgba(0,43,163, 0.5);
+			/*その他向け*/
+
+	color:white;
+
+	border-radius: 5px 5px 5px 5px;
+	/*margin: 0 1% 0 80%;*/
+	margin: 0;
+
+	width: 60px;
+	height: 60px;
+	-webkit-border-radius: 30px;/* width,heightの半分 */
+	-moz-border-radius: 30px;
+	border-radius: 30px;
+	cursor: pointer;
+}
+#bodyID #float.countOk{  
+	background: rgb(38, 71, 115);
+}
+#bodyID #NT_remain{  
+
+	z-index: 100;
+	position: fixed;
+	height: 40px;
+	width: 23%;
+	top: 5px;
+	right: 5px;
+	
+	/*background:rgba(150,43,163, 0.8);*/
+	border-radius: 5px 5px 5px 5px;
+	/*margin: 0 1% 0 80%;*/
+/**/
+	width: 60px;
+	height: 60px;
+	-webkit-border-radius: 30px;/* width,heightの半分 */
+	-moz-border-radius: 30px;
+	border-radius: 30px;
+/*	width: 50px;
+	height: 50px;
+	-webkit-border-radius: 25px;
+	-moz-border-radius: 25px;
+	border-radius: 25px;
+*/}

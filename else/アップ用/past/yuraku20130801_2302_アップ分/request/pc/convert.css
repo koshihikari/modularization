@@ -1,0 +1,459 @@
+﻿/*html.ie body.pc {
+	background: #b6a9e2 ;
+} 
+html.elseBL body.pc {
+	background: black ;
+} 
+*/
+
+
+
+
+/*IE*/
+html.ie body.pc .formError .formErrorArrow .line10,
+html.ie body.pc .formError .formErrorArrow .line9,
+html.ie body.pc .formError .formErrorArrow .line8,
+html.ie body.pc .formError .formErrorArrow .line7,
+html.ie body.pc .formError .formErrorArrow .line6,
+html.ie body.pc .formError .formErrorArrow .line5,
+html.ie body.pc .formError .formErrorArrow .line4,
+html.ie body.pc .formError .formErrorArrow .line3,
+html.ie body.pc .formError .formErrorArrow .line2,
+html.ie body.pc .formError .formErrorArrow .line1{
+	background: #187fc6;
+}
+
+
+html.ie body.pc .formError .formErrorArrow .line10 {
+	width: 19px;
+} 
+html.ie body.pc .formError .formErrorArrow .line9 {
+	width: 17px;
+} 
+html.ie body.pc .formError .formErrorArrow .line8 {
+	width: 15px;
+} 
+html.ie body.pc .formError .formErrorArrow .line7 {
+	width: 13px;
+} 
+html.ie body.pc .formError .formErrorArrow .line6 {
+	width: 11px;
+} 
+html.ie body.pc .formError .formErrorArrow .line5 {
+	width: 9px;
+} 
+html.ie body.pc .formError .formErrorArrow .line4 {
+	width: 7px;
+} 
+html.ie body.pc .formError .formErrorArrow .line3 {
+	width: 5px;
+} 
+html.ie body.pc .formError .formErrorArrow .line2 {
+	width: 3px;
+}
+html.ie body.pc .formError .formErrorArrow .line1{
+	width: 1px;
+}
+
+html.ie body.pc div.formErrorMsg.formErrorContent{
+	background: #187fc6;
+	width:auto;
+	font-size: 0.6rem !important;
+	padding: 3px 3px 2px 3px;
+}
+html.ie body.pc .formErrorClose{
+	background: #187fc6 !important;
+	border: #187fc6 !important;
+	display: none !important;
+}
+/*html.ie body.pc .blank {
+	background: #ffdddd !important;
+}*/
+html.ie body.pc .focus {
+	background: #ffffe5 !important;
+}
+html.ie body.pc .tdfocusmen {
+	background: #CEDEEF !important;
+}
+html.ie body.pc .tdfocuswomen {
+}
+html.ie body.pc .tdfocus {
+	background: #CEDEEF !important;
+}
+html.ie body.pc iframe[src='Inc/kojin_ichiran.html']{
+}
+
+html.ie body.pc span.floatspan{  
+	text-align: center;  
+	display:block;  
+	width: 100%;  
+	color: white;  
+}  
+html.ie body.pc span.floatspan:hover{  
+	background-color: red;  
+	color: white;  
+} 
+html.ie body.pc span.countspantext1{  
+	text-align: center;  
+	display:block;  
+}
+html.ie body.pc span.countspantext2{  
+	text-align: center;  
+	display:block;
+	padding: 5px;
+}
+html.ie body.pc span.countspantext21,
+html.ie body.pc span.countspantext22{  
+}
+html.ie body.pc span.countspanNum{  
+	color: red;
+	margin: 0 8px 0 8px;
+	font-size: 20px;
+	font-weight: bold;
+}
+html.ie body.pc span.countspanOk{  
+	text-align: center;
+	display: block !important;  
+	color: rgb(222, 222, 222);
+	margin: 0 8px 0 8px;
+	font-size: 15px;
+	font-weight: bold;
+	/*padding-bottom: 15px;*/
+	/*top: 50% !important;*/
+	/*margin-top: -1.0em;*/
+}
+html.ie body.pc #float.countOk{  
+	background: rgb(38, 71, 115);
+	cursor: pointer;
+}
+html.ie body.pc form > table:nth-of-type(9) .labeltd{
+	width: 100px;
+	padding-left: 10px;
+}
+html.ie body.pc form > table:nth-last-of-type(2) .labeltd{
+	width: 90px;
+	padding-left: 10px;
+}
+html.ie body.pc .privacyTd{
+	background:transparent;
+}
+html.ie body.pc .tdfocusParentLabel{
+}
+html.ie body.pc .tdfocuslabel{
+	color:#0066ff;
+}
+
+html.ie body.pc #float {
+	/*position: absolute;*/
+	position:fixed;
+	bottom: 5px;
+	right: 5px;
+	height: 70px;
+	width: 23%;
+	/*padding:10px;*/
+	line-height: 1.0rem;
+	background:rgb(0,43,163);/*IE向け*/
+
+	color:white;
+	text-align : center ;
+	/*border-radius: 5px 5px 5px 5px;*/
+	/*margin: 0 1% 0 80%;*/
+
+	/*top: 20px;*/
+
+
+}
+html.ie body.pc li.countOkli{  
+	list-style-type: none;  
+	top: 18% !important;
+	left: 0% !important;
+	margin: 5px !important;
+	padding: 0 !important;
+	/*margin-top: -3.0rem !important;*/
+}
+html.ie body.pc ul.floatul{  
+	display: inline-block;
+	text-align : center ;
+	list-style-type: none;  
+	/*width:100%;*/
+	/*margin: 0 auto;  */
+	margin-left:0;
+	margin-right:0;
+	padding: 0; 
+	/*bottom: 0;*/
+	top: 50% !important;
+	margin-top: 1.0em;
+	/*position: relative;*/
+	/*vertical-align:middle;*/
+}  
+
+html.ie body.pc li.floatli{  
+	float: left;  
+	width: 4%;  
+	margin: 0;  
+	padding: 0;  
+	/*text-align: center;*/
+	/*bottom: 0;*/
+	padding: 10px 0;  
+}
+html.ie body.pc input[type="text"],
+html.ie body.pc select{
+	background: transparent;
+}
+html.ie body.pc{
+	width: 100%;
+	height: 100%;
+	/*position: relative;*/
+}
+/**{
+	margin: 0 !important;
+}
+*/  
+
+
+
+
+
+
+
+
+
+/*Else Blowser*/
+html.elseBL body.pc li.countOkli{  
+	list-style-type: none;  
+}
+
+html.elseBL body.pc .formError .formErrorArrow .line10,
+html.elseBL body.pc .formError .formErrorArrow .line9,
+html.elseBL body.pc .formError .formErrorArrow .line8,
+html.elseBL body.pc .formError .formErrorArrow .line7,
+html.elseBL body.pc .formError .formErrorArrow .line6,
+html.elseBL body.pc .formError .formErrorArrow .line5,
+html.elseBL body.pc .formError .formErrorArrow .line4,
+html.elseBL body.pc .formError .formErrorArrow .line3,
+html.elseBL body.pc .formError .formErrorArrow .line2,
+html.elseBL body.pc .formError .formErrorArrow .line1{
+	background: #187fc6;
+}
+
+
+html.elseBL body.pc .formError .formErrorArrow .line10 {
+	width: 19px;
+} 
+html.elseBL body.pc .formError .formErrorArrow .line9 {
+	width: 17px;
+} 
+html.elseBL body.pc .formError .formErrorArrow .line8 {
+	width: 15px;
+} 
+html.elseBL body.pc .formError .formErrorArrow .line7 {
+	width: 13px;
+} 
+html.elseBL body.pc .formError .formErrorArrow .line6 {
+	width: 11px;
+} 
+html.elseBL body.pc .formError .formErrorArrow .line5 {
+	width: 9px;
+} 
+html.elseBL body.pc .formError .formErrorArrow .line4 {
+	width: 7px;
+} 
+html.elseBL body.pc .formError .formErrorArrow .line3 {
+	width: 5px;
+} 
+html.elseBL body.pc .formError .formErrorArrow .line2 {
+	width: 3px;
+}
+html.elseBL body.pc .formError .formErrorArrow .line1{
+	width: 1px;
+}
+
+html.elseBL body.pc div.formErrorMsg.formErrorContent{
+	background: #187fc6;
+	width:auto;
+	font-size: 0.6rem !important;
+	padding: 3px 3px 2px 3px;
+	/*display: inline !important;*/
+}
+html.elseBL body.pc .formErrorClose{
+	background: #187fc6 !important;
+	border: #187fc6 !important;
+	display: none !important;
+}
+/*html.elseBL body.pc .blank {
+	background: #ffdddd !important;
+}*/
+html.elseBL body.pc .focus {
+	background: #ffffe5 !important;
+}
+html.elseBL body.pc .tdfocusmen {
+	background: #CEDEEF !important;
+}
+html.elseBL body.pc .tdfocuswomen {
+}
+html.elseBL body.pc .tdfocus {
+	background: #CEDEEF !important;
+}
+html.elseBL body.pc iframe[src='Inc/kojin_ichiran.html']{
+}
+html.elseBL body.pc ul.floatul{  
+	list-style-type: none;  
+	margin: 0;  
+	padding: 0; 
+	bottom: 0;
+}  
+
+html.elseBL body.pc li.floatli{  
+	float: left;  
+	width: 4%;  
+	margin: 0;  
+	padding: 0;  
+	text-align: center;
+	bottom: 0;
+	padding: 10px 0;  
+}  
+  
+html.elseBL body.pc span.floatspan{  
+	text-align: center;  
+	display:block;  
+	width: 100%;  
+	color: white;  
+}  
+html.elseBL body.pc span.floatspan:hover{  
+	background-color: red;  
+	color: white;  
+} 
+html.elseBL body.pc span.countspantext1{  
+	text-align: center;  
+	display:block;  
+}
+html.elseBL body.pc span.countspantext2{  
+	text-align: center;  
+	display:block;
+	padding: 5px;
+}
+html.elseBL body.pc span.countspantext21,
+html.elseBL body.pc span.countspantext22{  
+}
+html.elseBL body.pc span.countspanNum{  
+	color: red;
+	margin: 0 8px 0 8px;
+	font-size: 20px;
+	font-weight: bold;
+}
+html.elseBL body.pc span.countspanOk{  
+	text-align: center;
+	display: block;  
+	color: rgb(222, 222, 222);
+	margin: 0 8px 0 8px;
+	font-size: 15px;
+	font-weight: bold;
+}
+html.elseBL body.pc #float.countOk{  
+	background: rgb(38, 71, 115);
+	cursor: pointer;
+}
+html.elseBL body.pc form > table:nth-of-type(9) .labeltd{
+	width: 100px;
+	padding-left: 10px;
+}
+html.elseBL body.pc form > table:nth-last-of-type(2) .labeltd{
+	width: 90px;
+	padding-left: 10px;
+}
+html.elseBL body.pc .privacyTd{
+	background:transparent;
+}
+html.elseBL body.pc .tdfocusParentLabel{
+}
+html.elseBL body.pc .tdfocuslabel{
+	color:#0066ff;
+	/*font-weight: bold;*/
+	/*margin-right: 15px;*/
+	/*display: inline-block;*/
+	/*font-size: 120%;*/
+	/*background:blue;*/
+	/*-webkit-animation: anime 0.1s ease 0 infinite alternate;*/
+	
+/*	-webkit-animation-name: anime1;
+	-webkit-animation-duration: 0.1s;
+	-webkit-animation-timing-function: ease;
+	-webkit-animation-iteration-count: 1;*/
+}
+html.elseBL body.pc #float {
+	position: fixed;
+
+	bottom: 5px;
+	right: 5px;
+	height: 40px;
+	width: 23%;
+	padding:10px;
+
+	background:rgba(0,43,163, 0.8);
+			/*その他向け*/
+
+	color:white;
+
+	border-radius: 5px 5px 5px 5px;
+	margin: 0 1% 0 80%;
+}
+html.elseBL body.pc #col_19{
+	width: 53px;
+}
+html.elseBL body.pc #col_19_2,
+html.elseBL body.pc #col_13_2,
+html.elseBL body.pc #col_13_3,
+html.elseBL body.pc #col_16{
+	width: 60px;
+}
+html.elseBL body.pc #col_17,
+html.elseBL body.pc #col_13{
+	width: 46px;
+}
+html.elseBL body.pc #col_16_2,
+html.elseBL body.pc #col_16_3{
+	width: 39px;
+}
+@-webkit-keyframes anime1 {
+	0% {width: 50px; height: 50px; background-color: aqua;}
+	100% {width: 200px; height: 50px; background-color: blue;}
+}
+@-webkit-keyframes anime {
+	0% {	opacity:1;	}
+	100% {	opacity:0;	}
+}
+
+@tmp(val1, vql2, val3) {
+	-webkit-animation-name: val1;
+	-webkit-animation-duration: vql2;
+	-webkit-animation-timing-function: ease;
+	-webkit-animation-iteration-count: 1;
+
+	animation-name: val1;
+	animation-duration: vql2;
+	animation-timing-function: ease;
+	animation-iteration-count: 1;
+}
+body#bodyID.pc form#frm input,
+body#bodyID.pc form#frm select{
+	background: white;
+}
+body#bodyID form#formID .MouseoverNow{
+	background: #cedeef;
+	/*background: yellow;*/
+}
+body#bodyID form#formID .blank {
+	/*background: green;*/
+	background: #ffdddd;
+}
+body#bodyID form#formID .CursorFocusNow{
+	background: #ffffe5;
+	/*background: red;*/
+}
+body#bodyID form#formID .MouseoverRadioNow{
+	color: #0066ff;
+	/*color: red;*/
+}
+body#bodyID form#formID #B1{
+	display: none;
+}

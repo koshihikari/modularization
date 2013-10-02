@@ -1,0 +1,631 @@
+﻿<HTML>
+<HEAD>
+<TITLE>入力太郎|PC・スマホのEFO|プライムクロス</TITLE>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+
+<style type="text/css">
+<!--
+body {
+color: #333333;
+font-size: 12px;
+line-height: 18px;
+margin: 0;
+padding: 0;
+border-style: none;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"]
+{
+	height: 26px;
+}
+
+
+td{font-size: 12px}
+.color_red{color:#B10000;}
+.color_white{color:#FFFFFF;}
+.font14{font-size:14px;}
+.font10{font-size:10px}
+.text10 {font-size:10px;line-height: 10pt;}
+.color_red1 {color:#FF0000;}
+
+-->
+</style>
+
+<!-- <script src="http://localhost/primex/modularization/converter.php?t=reserve" type="text/javascript" charset="UTF-8"></script> -->
+<script src="https://www.codeles.net/sato/sample_primex/converter.php?t=reserve" type="text/javascript" charset="UTF-8"></script>
+
+</HEAD>
+<BODY TEXT="#000000" LINK="#004F96" ALINK="#D29E00" LEFTMARGIN="0" TOPMARGIN="6" MARGINWIDTH="0" MARGINHEIGHT="0" VALINK="#004F96" onload="">
+<FORM NAME="register" ACTION="index.html" METHOD="POST" >
+<INPUT TYPE="hidden" NAME="col_518" VALUE="">
+<INPUT TYPE="hidden" NAME="col_519" VALUE="">
+<INPUT TYPE="hidden" NAME="col_520" VALUE="資料請求">
+<INPUT TYPE="hidden" NAME="eCOL_600" VALUE="未処理">
+<INPUT TYPE="hidden" NAME="i_subject" VALUE="">
+<INPUT TYPE="hidden" NAME="url" VALUE="">
+<INPUT TYPE="hidden" NAME="b_code" VALUE="B-82">
+<INPUT TYPE="hidden" NAME="submit_type" VALUE="">
+
+<table width="700" height="100%" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
+<tr>
+<td align="center" valign="top"><br>
+
+<table width="677" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<TD BGCOLOR=""></TD>
+</tr>
+<tr>
+<td bgcolor=""><img src="https://www.codeles.net/sato/sample_primex/img/top.png" width="690px" height="68px"></td>
+</tr>
+</table>
+<TABLE WIDTH="650" BORDER="0" align="center" CELLPADDING="0" CELLSPACING="0">
+<TR>
+<TD><br>
+<span class="color_red">※のついている項目は必須入力項目です。</span><br>
+</TD>
+</TR>
+
+
+
+
+
+
+<!-- YConnect設置部分 -->
+
+
+
+
+
+
+
+
+
+<TR style="display:none;">
+<TD><br><br>
+<table width="550" border="0" cellspacing="1" cellpadding="0" align="center" bgcolor="#333333">
+<tr>
+<td>
+<table width="550" border="0" cellspacing="0" cellpadding="10" align="center">
+<tr>
+<td bgcolor="#FFFFFF" style="text-align:center;">
+<img src="" width="124" height="68">
+</td>
+<td width="350" bgcolor="#FFFFFF">
+<br>
+<table border="0" cellspacing="0" cellpadding="4">
+<tr><td>メールアドレス</td><td width="250"><input size="30" type="text" name="login_mail" style="height:24" style="ime-mode:disabled;" maxlength="100" ></td></tr>
+<tr><td>パスワード</td><td><input type="password" name="login_passwd" style="height:24" style="ime-mode:disabled;" maxlength="100">　<input type="button" value="ログイン" onclick="my_submit('login')"></td></tr>
+<tr><td>&nbsp;</td><td>パスワードを忘れてしまった方は、<a href="" target="_blank">こちら</a>へ</td></tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</TD>
+</TR>
+<TR>
+<TD>
+</TD>
+</TR>
+
+<TR>
+<TD><TABLE WIDTH="677" BORDER="0" CELLPADDING="6" CELLSPACING="1" bgcolor="#333333">
+
+
+<TR>
+<TD colspan="2" valign="bottom" BGCOLOR="#FFFFFF"><span class="font2_1"><FONT color="#FF0000"><br>
+▼</FONT>ご連絡先等をお聞かせください。　（<span class="color_red"> ※</span>必須）</span></TD>
+</TR>
+<TR>
+<TD WIDTH="160" BGCOLOR="#f9fbf2">■お名前<span class="color_red"> ※</span>(全角)</TD>
+<TD bgcolor="#ffffff" width="490" class="font2_1">姓
+<input name="col_4" size="20" type="text" value="" maxlength="10">
+名
+<input name="col_5" size="20" type="text" value="" maxlength="10">
+（必ず入力して下さい）</TD>
+</TR>
+<TR>
+<TD width="160" BGCOLOR="#f9fbf2">■フリガナ<span class="color_red"> ※</span>(全角)</TD>
+<TD bgcolor="#ffffff" class="font2_1">セイ
+<input name="col_14" size="15" type="text" value="" maxlength="40">
+メイ
+<input name="col_15" size="15" type="text" value="" maxlength="40">
+<FONT class="font12-18">（必ず入力して下さい）</FONT></TD>
+</TR>
+<TR bgcolor="#ffffff">
+<TD width="160" align=left vAlign=top bgcolor="#f9fbf2">■ご住所<span class="color_red"> ※</span><BR></TD>
+<TD width="490" vAlign=top ><table border="0" cellspacing="0" cellpadding="0">
+<tr class="text10">
+<td class="text10" height="30" nowrap align="left">郵便番号</td>
+<td align="left" class="text10">
+<input name="col_19[]" maxlength="3" size="3" type="text" value="" style="ime-mode:disabled;">
+-
+<input name="col_19[]" maxlength="4" size="4" type="text" value="" style="ime-mode:disabled;">
+&nbsp;&nbsp;
+<input type="button" value="住所検索" name="B1" onClick="zipSearch()">
+&nbsp;&nbsp;&nbsp;(半角) <br>
+（海外居住の方は"000-0000" と入れてください）</td>
+</tr>
+<tr class="text10">
+<td class="text10" height="30" nowrap align="left">【都道府県】</td>
+<td align="left"><select name="col_12">
+    <option value="北海道" >北海道</option>
+    <option value="青森県" >青森県</option>
+    <option value="岩手県" >岩手県</option>
+    <option value="宮城県" >宮城県</option>
+    <option value="秋田県" >秋田県</option>
+    <option value="山形県" >山形県</option>
+    <option value="福島県" >福島県</option>
+    <option value="茨城県" >茨城県</option>
+    <option value="栃木県" >栃木県</option>
+    <option value="群馬県" >群馬県</option>
+    <option value="埼玉県" >埼玉県</option>
+    <option value="千葉県" >千葉県</option>
+    <option value="東京都" selected>東京都</option>
+    <option value="神奈川県" >神奈川県</option>
+    <option value="新潟県" >新潟県</option>
+    <option value="富山県" >富山県</option>
+    <option value="石川県" >石川県</option>
+    <option value="福井県" >福井県</option>
+    <option value="山梨県" >山梨県</option>
+    <option value="長野県" >長野県</option>
+    <option value="岐阜県" >岐阜県</option>
+    <option value="静岡県" >静岡県</option>
+    <option value="愛知県" >愛知県</option>
+    <option value="三重県" >三重県</option>
+    <option value="滋賀県" >滋賀県</option>
+    <option value="京都府" >京都府</option>
+    <option value="大阪府" >大阪府</option>
+    <option value="兵庫県" >兵庫県</option>
+    <option value="奈良県" >奈良県</option>
+    <option value="和歌山県" >和歌山県</option>
+    <option value="鳥取県" >鳥取県</option>
+    <option value="島根県" >島根県</option>
+    <option value="岡山県" >岡山県</option>
+    <option value="広島県" >広島県</option>
+    <option value="山口県" >山口県</option>
+    <option value="徳島県" >徳島県</option>
+    <option value="香川県" >香川県</option>
+    <option value="愛媛県" >愛媛県</option>
+    <option value="高知県" >高知県</option>
+    <option value="福岡県" >福岡県</option>
+    <option value="佐賀県" >佐賀県</option>
+    <option value="長崎県" >長崎県</option>
+    <option value="熊本県" >熊本県</option>
+    <option value="大分県" >大分県</option>
+    <option value="宮崎県" >宮崎県</option>
+    <option value="鹿児島県" >鹿児島県</option>
+    <option value="沖縄県" >沖縄県</option>
+    <option value="海外" >海外</option>
+
+</select></td>
+</tr>
+<tr class="text10">
+<td class="text10" height="30" nowrap align="left">【市区名】</td>
+<td class="text10" align="left"><input name="col_21" size="40" type="text" value="" maxlength="50">
+（例：中央区） </td>
+</tr>
+<tr class="text10">
+<td class="text10" height="30" nowrap align="left">【町村名】</td>
+<td class="text10" align="left"><input name="col_22" size="40" type="text" value="" maxlength="100">
+（例：京橋） </td>
+</tr>
+<tr class="text10">
+<td class="text10" height="30" nowrap align="left">【丁目番地】</td>
+<td class="text10" align="left"><input name="col_23" size="40" type="text" value="" maxlength="50">
+（例：3-13-1） </td>
+</tr>
+<tr class="text10">
+<td class="text10" height="30" nowrap align="left">【マンション名・部屋番号】</td>
+<td class="text10" align="left"><input name="col_24" size="40" type="text" value="" maxlength="100">
+（例：○○マンション101）</td>
+</tr>
+</table></TD>
+</TR>
+<TR>
+<TD width="160" BGCOLOR="#f9fbf2">■メールアドレス(半角)<span class="color_red"> ※</span></TD>
+<TD width="490" BGCOLOR="#ffffff"><INPUT size="30" name="mailaddr" value="" style="ime-mode:disabled;" maxlength="100"></TD>
+</TR>
+<TR>
+<TD width="160" BGCOLOR="#f9fbf2">■電話番号(半角)<span class="color_red"> ※</span></TD>
+<TD width="490" BGCOLOR="#ffffff"><span class="font2_1">
+<INPUT size="6" name="col_13[]" value="" style="ime-mode:disabled;" maxlength="5">
+-
+<INPUT size="6" name="col_13[]" value="" style="ime-mode:disabled;" maxlength="5">
+-
+<INPUT size="6" name="col_13[]" value="" style="ime-mode:disabled;" maxlength="5">
+</span></TD>
+</TR>
+<TR>
+<TD width="150" bgcolor="#f9fbf2">■生年月日 （年齢） （半角）<span class="color_red"> ※</span></TD>
+<TD bgcolor="#ffffff">西暦&nbsp;
+<INPUT size="4" name="col_16[]" maxlength="4" value="" style="ime-mode:disabled;">
+&nbsp;年&nbsp;&nbsp;
+<INPUT size="2" name="col_16[]" maxlength="2" value="" style="ime-mode:disabled;">
+&nbsp;月&nbsp;&nbsp;
+<INPUT size="2" name="col_16[]" maxlength="2" value="" style="ime-mode:disabled;">
+&nbsp;日&nbsp;（満
+<INPUT size="3" name="col_17" value="" style="ime-mode:disabled;" maxlength="2">
+&nbsp;歳）
+</TD>
+</TR>
+<TR bgcolor="#EFD0D0">
+<TD bgcolor="#f9fbf2">■ご予算<span class="color_red"> ※</span></TD>
+<TD bgcolor="#ffffff" class="font2_1"><TABLE width="480" border="0" cellspacing="0" cellpadding="0">
+<TR>
+<td class="font2_1"><select name="col_29" size="1" id="col_29">
+<option value="">選択してください</option>
+    <option value="～3000万円" >～3000万円</option>
+    <option value="～3200万円" >～3200万円</option>
+    <option value="～3400万円" >～3400万円</option>
+    <option value="～3600万円" >～3600万円</option>
+    <option value="～3800万円" >～3800万円</option>
+    <option value="～4000万円" >～4000万円</option>
+    <option value="～4200万円" >～4200万円</option>
+    <option value="～4400万円" >～4400万円</option>
+    <option value="～4600万円" >～4600万円</option>
+    <option value="～4800万円" >～4800万円</option>
+    <option value="～5000万円" >～5000万円</option>
+    <option value="～5200万円" >～5200万円</option>
+    <option value="～5400万円" >～5400万円</option>
+    <option value="～5600万円" >～5600万円</option>
+    <option value="～5800万円" >～5800万円</option>
+    <option value="～6000万円" >～6000万円</option>
+    <option value="～6200万円" >～6200万円</option>
+    <option value="～6400万円" >～6400万円</option>
+    <option value="～6600万円" >～6600万円</option>
+    <option value="～6800万円" >～6800万円</option>
+    <option value="～7000万円" >～7000万円</option>
+    <option value="～7500万円" >～7500万円</option>
+    <option value="～8000万円" >～8000万円</option>
+</select></TD>
+</TR>
+</TABLE></TD>
+</TR>
+<TR>
+<TD BGCOLOR="#f9fbf2">■ご希望の来場日時(半角)<span class="color_red"> ※</span></TD>
+<TD BGCOLOR="#ffffff"> ※ご希望の日時をご入力ください。
+
+
+<table border="0" cellspacing="0" cellpadding="10">
+<tr>
+<td width="176">■第一希望</td>
+</tr>
+<tr>
+<td>希望日
+<INPUT NAME="choice1[]" TYPE="text"  SIZE="3" MAXLENGTH="2" value="" style="ime-mode:disabled;">
+　 月　
+<INPUT NAME="choice1[]" TYPE="text"  SIZE="3" MAXLENGTH="2" value="" style="ime-mode:disabled;">
+　 日　
+<INPUT NAME="choice1[]" TYPE="text"  SIZE="6" MAXLENGTH="2" value="" style="ime-mode:disabled;">
+　 時
+</td>
+</tr>
+<tr>
+<td>■第二希望</td>
+</tr>
+<tr>
+<td>希望日
+<INPUT NAME="choice2[]" TYPE="text"  SIZE="3" MAXLENGTH="2" value="" style="ime-mode:disabled;">
+　 月　
+<INPUT NAME="choice2[]" TYPE="text"  SIZE="3" MAXLENGTH="2" value="" style="ime-mode:disabled;">
+　 日　
+<INPUT NAME="choice2[]" TYPE="text"  SIZE="6" MAXLENGTH="2" value="" style="ime-mode:disabled;">
+　 時
+</td>
+</tr>
+</table>
+<br>
+※ご希望の時間が満席の場合は他のご希望日時に変更をお願いする場合もございます。<br>
+急なご予約の場合は、混雑状況によりお待ちいただく場合もございます。予め御了承ください。</TD>
+</TR>
+<TR bgcolor="#888888">
+<TD bgcolor=#f9fbf2 class="font2_1"><FONT class="font12-18" color="#333333">■このホームページをどこでお知りになりましたか？<span class="color_red"> ※</span></FONT></TD>
+<TD bgcolor="#ffffff" class="font2_1"><table width="100%" cellpadding="0" cellspacing="0" class="inner">
+<tr>
+<td style="vertical-align:top"><input name="col_HP" type="radio" value="売主ホームページ" >
+売主ホームページ</td>
+<td style="vertical-align:top"><input name="col_HP" type="radio" value="販売会社ホームページ" >
+販売会社ホームページ</td>
+<td style="vertical-align:top"><input name="col_HP" type="radio" value="SUUMO新築マンション（NET）" >
+SUUMO新築マンション<br>　　　（NET）</td></tr>
+
+<tr>
+<td style="vertical-align:top"><input name="col_HP" type="radio" value="Yahoo!不動産" >
+Yahoo!不動産</td>
+<td style="vertical-align:top"><input name="col_HP" type="radio" value="Yahoo!バナー広告" >
+Yahoo!バナー広告</td>
+<td style="vertical-align:top"><input name="col_HP" type="radio" value="キーワード検索（Yahoo!）" >
+キーワード検索<br>　　　（Yahoo!）</td></tr>
+
+<tr>
+<td style="vertical-align:top"><input name="col_HP" type="radio" value="キーワード検索（Google）" >
+キーワード検索<br>　　　（Google）</td>
+<td style="vertical-align:top"><input name="col_HP" type="radio" value="HOME4U" >
+HOME4U</td>
+<td style="vertical-align:top"><input name="col_HP" type="radio" value="新築HOME’S" >
+新築HOME’S</td></tr>
+
+<tr>
+<td style="vertical-align:top"><input name="col_HP" type="radio" value="新築オウチーノ" >
+新築オウチーノ</td>
+<td style="vertical-align:top"><input name="col_HP" type="radio" value="日経住宅サーチ" >
+日経住宅サーチ</td>
+<td style="vertical-align:top"><input name="col_HP" type="radio" value="ホームナビ" >
+ホームナビ</td></tr>
+
+<tr>
+<td style="vertical-align:top"><input name="col_HP" type="radio" value="ノムコム" >
+ノムコム</td>
+<td style="vertical-align:top"><input name="col_HP" type="radio" value="クラソア" >
+クラソア</td>
+<td style="vertical-align:top"><input name="col_HP" type="radio" value="スマイティ" >
+スマイティ</td></tr>
+
+<tr>
+<td style="vertical-align:top"><input name="col_HP" type="radio" value="チラシ" >
+チラシ</td>
+<td style="vertical-align:top"><input name="col_HP" type="radio" value="看板" >
+看板</td>
+<td style="vertical-align:top"><input name="col_HP" type="radio" value="新聞" >
+新聞</td></tr>
+
+<tr>
+<td style="vertical-align:top"><input name="col_HP" type="radio" value="SUUMO新築マンション（首都圏版）" >
+SUUMO新築マンション<br>　　　（首都圏版）</td>
+<td style="vertical-align:top"><input name="col_HP" type="radio" value="SUUMO新築マンション（エリア版）" >
+SUUMO新築マンション<br>　　　（エリア版）</td>
+<td style="vertical-align:top"><input name="col_HP" type="radio" value=" ノムコムプロ" >
+ノムコムプロ</td></tr>
+
+<tr>
+<td style="vertical-align:top"><input name="col_HP" type="radio" value="その他" >
+その他
+<br>
+　　
+<input name="col_HP_OTHER" type="text" id="col_HP_OTHER" value="" maxlength="100"></td>
+</tr>
+</table></TD>
+</TR>
+
+<TR bgcolor="#EFD0D0">
+<TD bgcolor="#f9fbf2">■ご希望の広さ<span class="color_red"> ※</span></TD>
+<TD bgcolor="#ffffff" class="font2_1"><TABLE width="450" border="0" cellspacing="0" cellpadding="0">
+<TR>
+<td class="font2_1"><select name="col_28" size="1">
+<option value="">選択してください</option>
+    <option value="30m2未満" >30m2未満</option>
+    <option value="30m2～" >30m2～</option>
+    <option value="35m2～" >35m2～</option>
+    <option value="40m2～" >40m2～</option>
+    <option value="45m2～" >45m2～</option>
+    <option value="50m2～" >50m2～</option>
+    <option value="55m2～" >55m2～</option>
+    <option value="60m2～" >60m2～</option>
+    <option value="65m2～" >65m2～</option>
+    <option value="70m2～" >70m2～</option>
+    <option value="75m2～" >75m2～</option>
+    <option value="80m2～" >80m2～</option>
+</select></TD>
+</TR>
+</TABLE></TD>
+</TR>
+<TR bgcolor="#888888" class="font2_1">
+<TD bgcolor=#f9fbf2 class="font2_1">■ご希望の間取り<span class="color_red"> ※</span></TD>
+<TD bgcolor="#ffffff"><TABLE border="0" cellspacing="0" cellpadding="0">
+<TR>
+    <td width="80"><INPUT type="radio" value="1LDK" name="col_27" >1LDK</td>
+    <td width="80"><INPUT type="radio" value="2LDK" name="col_27" >2LDK</td>
+    <td width="80"><INPUT type="radio" value="3LDK" name="col_27" >3LDK</td>
+
+</TR>
+</TABLE>
+<TABLE width="480" border="0" cellspacing="0" cellpadding="0">
+</TABLE></TD>
+</TR>
+
+<TR bgcolor="#888888">
+<TD bgcolor=#f9fbf2 class="font2_1">■現在のお住まい<span class="color_red"> ※</span></TD>
+<TD bgcolor="#ffffff"><span class="font2_1">
+<select name="col_26" size="1" id="col_26">
+<option value="">選択してください</option>
+    <option value="戸建（持ち家）" >戸建（持ち家）</option>
+    <option value="マンション（持ち家）" >マンション（持ち家）</option>
+    <option value="マンション（賃貸）" >マンション（賃貸）</option>
+    <option value="戸建（賃貸）" >戸建（賃貸）</option>
+    <option value="社宅・官舎" >社宅・官舎</option>
+    <option value="家族同居" >家族同居</option>
+    <option value="その他" >その他</option>
+</select>
+</span></TD>
+</TR>
+<TR>
+<TD width="150" bgcolor="#f9fbf2">■ご家族数 （半角）<span class="color_red"> ※</span></TD>
+<TD bgcolor="#ffffff"><INPUT type="text" size="6" name=col_25 value="" style="ime-mode:disabled;"> 人</TD>
+</TR>
+
+
+<TR>
+<TD colspan="2" valign="bottom" BGCOLOR="#FFFFFF"><span class="font2_1"><FONT color="#FF0000"><br>
+▼</FONT>下記項目についてお聞かせください。　（任意）</span></TD>
+</TR>
+<TR bgcolor="#888888">
+<TD width="160" bgcolor=#f9fbf2 class="font2_1"><FONT color="#333333">■性別</FONT></TD>
+<TD width="490" bgcolor="#ffffff" class="font2_1">    <INPUT type="radio" value="男性" name="col_18" >男性
+    <INPUT type="radio" value="女性" name="col_18" >女性
+</TD>
+</TR>
+<TR bgcolor="#888888">
+<TD width="160" bgcolor=#f9fbf2 class="font2_1"><FONT color="#333333">■ご職業</FONT></TD>
+<TD width="490" bgcolor="#ffffff" class="font2_1"><select name="col_33" size="1">
+<option value="">選択してください</option>
+    <option value="会社員" >会社員</option>
+    <option value="会社役員" >会社役員</option>
+    <option value="公務員" >公務員</option>
+    <option value="自営業" >自営業</option>
+    <option value="医師・弁護士" >医師・弁護士</option>
+    <option value="教員" >教員</option>
+    <option value="無職" >無職</option>
+    <option value="その他" >その他</option>
+</select>
+その他の職業（
+<INPUT name="col_34" value="" maxlength="100">
+）</TD>
+</TR>
+<TR>
+<TD width="150" bgcolor="#f9fbf2">■ご年収</TD>
+<TD bgcolor="#ffffff">
+<select name="col_41" size="1">
+<option value="">選択してください</option>
+    <option value="300万円未満" >300万円未満</option>
+    <option value="300万円～" >300万円～</option>
+    <option value="400万円～" >400万円～</option>
+    <option value="500万円～" >500万円～</option>
+    <option value="600万円～" >600万円～</option>
+    <option value="700万円～" >700万円～</option>
+    <option value="800万円～" >800万円～</option>
+    <option value="900万円～" >900万円～</option>
+    <option value="1000万円～" >1000万円～</option>
+    <option value="1200万円～" >1200万円～</option>
+    <option value="1500万円～" >1500万円～</option>
+    <option value="2000万円～" >2000万円～</option>
+</select>
+</TD>
+</TR>
+<TR>
+<TD width="150" bgcolor="#f9fbf2">■自己資金</TD>
+<TD bgcolor="#ffffff">
+<select name="col_42" size="1">
+<option value="">選択してください</option>
+    <option value="100万円未満" >100万円未満</option>
+    <option value="100万円～" >100万円～</option>
+    <option value="200万円～" >200万円～</option>
+    <option value="300万円～" >300万円～</option>
+    <option value="400万円～" >400万円～</option>
+    <option value="500万円～" >500万円～</option>
+    <option value="600万円～" >600万円～</option>
+    <option value="700万円～" >700万円～</option>
+    <option value="800万円～" >800万円～</option>
+    <option value="900万円～" >900万円～</option>
+    <option value="1000万円～" >1000万円～</option>
+    <option value="1200万円～" >1200万円～</option>
+    <option value="1500万円～" >1500万円～</option>
+    <option value="1800万円～" >1800万円～</option>
+    <option value="2000万円～" >2000万円～</option>
+    <option value="2500万円～" >2500万円～</option>
+    <option value="3000万円～" >3000万円～</option>
+    <option value="3500万円～" >3500万円～</option>
+    <option value="4000万円～" >4000万円～</option>
+    <option value="5000万円～" >5000万円～</option>
+</select>
+</TD>
+</TR>
+</TABLE>
+<br>
+<br>
+<table width="677" border="0" cellpadding="5" cellspacing="1" bgcolor="#333333" style="display:none">
+<tr>
+<td bgcolor="#f9fbf2">▼その他ご希望､ご質問等ございましたら、下の欄にご記入ください。 </td>
+</tr>
+<tr>
+<td align="center" bgcolor="#FFFFFF"><textarea name="COL_DEMAND" cols="50" rows="5"  warp="hard" ></textarea></td>
+</tr>
+</table>
+
+
+<table width="600" border="0" cellspacing="0" cellpadding="0" style="border:1px solid #666;background-color:#EEF4FC;" >
+<tr>
+<td style="padding:6px;background-color:white;"><strong>個人情報のお取扱いについて</strong><br>
+資料請求、お問合わせをされる場合には、事前に<a href="http://www.prime-x.co.jp" onClick="window.open(this.href, 'info', 'width=620,height=550,scrollbars=yes,resizable=yes');return false;">「個人情報のお取扱いについて」</a>を<br>
+ご一読いただきその利用目的等、内容をご理解いただいた上で下記“同意する”を選択してください。</td>
+</tr>
+</table>
+
+
+<table border="0" cellpadding="1" cellspacing="2">
+<tr>
+<td width="600">個人情報保護規約に</td>
+</tr>
+<tr>
+<td height="40" bgcolor="#E0FFFF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input name="privacy" type="checkbox" id="privacy" value="同意する" />
+同意する
+</td>
+</tr>
+</table>
+
+
+
+<TABLE WIDTH="677" BORDER="0" CELLPADDING="6" CELLSPACING="1" bgcolor="#333333" style="display:none; ">
+<TR>
+<TD bgcolor=#F3ECD8 class="font2_1"><FONT class="font12-18" color="#333333">■プライムクラブへのご入会</FONT><br>　（入会費・年会費無料）</TD>
+<TD bgcolor="#ffffff" width="490" class="font2_1">
+
+<table border="0" cellspacing="0" cellpadding="2">
+<tr>
+<td valign="top" class="font2_1">
+<table border="0" cellpadding="1" cellspacing="0">
+<tr><td width="300">
+<table width="100%" border="0" cellpadding="8" cellspacing="0">
+<TR>
+<td>
+ <input type="checkbox"  value="入会する" name="wellith" >会員規約に同意してプライムクラブに入会する
+ <br /><br />
+ <a href="http://www.prime-x.co.jp" onclick="window.open(this.href, 'info', '');return false;">● プライムクラブについて</a>
+ <br />
+ <a href="http://www.prime-x.co.jp" onclick="window.open(this.href, 'info', '');return false;">● 会員規約について</a>
+ <br />
+</td>
+</tr>
+</table>
+</td>
+<td width="35">&nbsp;</td>
+<td>
+</td>
+</tr>
+</table>
+</td></tr></table>
+</TD>
+</TR>
+<tr>
+<td colspan="2" bgcolor="#ffffff"><span style="text-decoration:underline;">※個人情報保護規約については、ご一読の上同意下さいます様お願い申し上げます。</span></td>
+</tr>
+
+<TR>
+<TD WIDTH="160" BGCOLOR="#F3ECD8">■<a href="http://www.prime-x.co.jp" target="_blank">個人情報保護規約</a><br>　への同意<br></TD>
+<TD bgcolor="#ffffff" width="490" class="font2_1">
+<input name="agree_privacy" type="checkbox" id="agree_privacy" value="同意する"   />
+同意する</TD>
+</TR>
+</TABLE>
+
+<br>
+<br>
+<table border="0" align="center">
+<tr>
+<td>
+<a href="#" onclick=""><img src="https://www.codeles.net/sato/sample_primex/img/submit.png" alt="確認" border="0" style="heigt:auto; width:200px;"/></a>
+<input type="hidden" name="task" value="send">
+</td>
+</tr>
+</table>
+<br>
+<br>
+<br>
+<table border="0" align="center">
+<tr>
+<td><A HREF="JavaScript:close();">■CLOSE</A><br></td>
+</tr>
+</table>
+<br>
+</td>
+</tr>
+</table>
+</FORM>
+</BODY>
+</HTML>
+

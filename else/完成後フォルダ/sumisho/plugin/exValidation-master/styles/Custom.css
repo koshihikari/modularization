@@ -1,0 +1,63 @@
+﻿@charset "utf-8";
+
+/*Else Blowser*/
+html.elseBL body#bodyID li.countOkli{  
+	list-style-type: none;  
+}
+
+body#bodyID .formError .formErrorArrow .line10,
+body#bodyID .formError .formErrorArrow .line9,
+body#bodyID .formError .formErrorArrow .line8,
+body#bodyID .formError .formErrorArrow .line7,
+body#bodyID .formError .formErrorArrow .line6,
+body#bodyID .formError .formErrorArrow .line5,
+body#bodyID .formError .formErrorArrow .line4,
+body#bodyID .formError .formErrorArrow .line3,
+body#bodyID .formError .formErrorArrow .line2,
+body#bodyID .formError .formErrorArrow .line1{
+	background: #187fc6;
+}
+
+body#bodyID .formError .formErrorArrow .line10 {
+	width: 19px;
+} 
+body#bodyID .formError .formErrorArrow .line9 {
+	width: 17px;
+} 
+body#bodyID .formError .formErrorArrow .line8 {
+	width: 15px;
+} 
+body#bodyID .formError .formErrorArrow .line7 {
+	width: 13px;
+} 
+body#bodyID .formError .formErrorArrow .line6 {
+	width: 11px;
+} 
+body#bodyID .formError .formErrorArrow .line5 {
+	width: 9px;
+} 
+body#bodyID .formError .formErrorArrow .line4 {
+	width: 7px;
+} 
+body#bodyID .formError .formErrorArrow .line3 {
+	width: 5px;
+} 
+body#bodyID .formError .formErrorArrow .line2 {
+	width: 3px;
+}
+body#bodyID .formError .formErrorArrow .line1{
+	width: 1px;
+}
+
+body#bodyID div.formErrorMsg.formErrorContent{
+	background: #187fc6;
+	width:auto;
+	/*font-size: 0.6rem !important;*/
+	padding: 3px 3px 2px 3px;
+}
+body#bodyID .formErrorClose{
+	background: #187fc6 !important;
+	border: #187fc6 !important;
+	display: none !important;
+}
+
